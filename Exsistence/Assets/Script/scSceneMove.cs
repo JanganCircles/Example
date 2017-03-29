@@ -36,6 +36,7 @@ public class scSceneMove : MonoBehaviour
             //가져온 SettingCanvas를 활성화
             case "setting":
                 SettingCanvas.SetActive(true);
+                scPlayer.play = false;
                 break;
 
             //버튼의 이름이 Back이면 자신의 부모 객체 비활성화
