@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.IO;
+
 
 public class scMemo : MonoBehaviour {
     private string file;
@@ -11,9 +13,10 @@ public class scMemo : MonoBehaviour {
     void Start()
     {
         memoNote = gameObject.GetComponentInChildren<MeshRenderer>();
-        file = @"C:\Users\admin\Documents\GitHub\Exsistence";
-        textValue = System.IO.File.ReadAllText(file);
-        print(textValue);
+        //file = @"C:\Users\admin\Documents\GitHub\Exsistence";
+        TextAsset textfile = Resources.Load("Memo") as TextAsset;
+        textValue = " " + textfile;
+        Debug.Log(textValue);
     }
 	
 	// Update is called once per frame
