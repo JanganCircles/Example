@@ -42,20 +42,20 @@ public class scPlayer : MonoBehaviour {
             scSceneMove.EnableCreateMenu = false;
             play = false;
 
-            GameObject canvas = Resources.Load("Prefabs/PauseCanvas") as GameObject;
-            Instantiate(canvas, new Vector3(0, 0, 0), Quaternion.identity);
+            scSceneMove.Canvas[1].SetActive(true);
         }
         else if(Input.GetKeyDown(KeyCode.Escape) && !scSceneMove.EnableCreateMenu)
         {
-            if(GameObject.Find("SettingCanvas(Clone)"))
+            if(GameObject.Find("SettingCanvas"))
             {
-                Destroy(GameObject.Find("SettingCanvas(Clone)"));
+                scSceneMove.Canvas[0].SetActive(false); ;
             }
             else
             {
                 scSceneMove.EnableCreateMenu = true;
                 play = true;
-                Destroy(GameObject.Find("PauseCanvas(Clone)"));
+
+                scSceneMove.Canvas[1].SetActive(false);
             }
         }
     }
