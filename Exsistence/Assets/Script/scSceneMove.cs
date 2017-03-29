@@ -9,7 +9,7 @@ public class scSceneMove : MonoBehaviour
     public string buttonName;
 
     public static bool EnableCreateMenu = true;
-    public static GameObject[] Canvas;
+    public static GameObject SettingCanvas;
 
     public void MoveScene()
     {
@@ -35,7 +35,7 @@ public class scSceneMove : MonoBehaviour
             
             //가져온 SettingCanvas를 활성화
             case "setting":
-                Canvas[0].SetActive(true);
+                SettingCanvas.SetActive(true);
                 break;
 
             //버튼의 이름이 Back이면 자신의 부모 객체 비활성화

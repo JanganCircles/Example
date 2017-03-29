@@ -4,14 +4,18 @@ using UnityEngine;
 
 public class scPlayer : MonoBehaviour {
     public static bool play = true;
+
 	private float h = 0.0f;
 	private float v = 0.0f;
-	private Transform tr;
 	public float moveSpeed = 10.0f;
 	public float rotSpeed = 100.0f;
-    GameObject flashlight;
+    
     private int iflashlight = 0;
-  
+    public GameObject PauseCanvas;
+    GameObject flashlight;
+
+    private Transform tr;
+
     // Use this for initialization
     void Start () {
 		tr = GetComponent<Transform>();
@@ -42,20 +46,20 @@ public class scPlayer : MonoBehaviour {
             scSceneMove.EnableCreateMenu = false;
             play = false;
 
-            scSceneMove.Canvas[1].SetActive(true);
+            PauseCanvas.SetActive(true);
         }
         else if(Input.GetKeyDown(KeyCode.Escape) && !scSceneMove.EnableCreateMenu)
         {
             if(GameObject.Find("SettingCanvas"))
             {
-                scSceneMove.Canvas[0].SetActive(false); ;
+                scSceneMove.SettingCanvas.SetActive(false); ;
             }
             else
             {
                 scSceneMove.EnableCreateMenu = true;
                 play = true;
 
-                scSceneMove.Canvas[1].SetActive(false);
+                PauseCanvas.SetActive(false);
             }
         }
     }
