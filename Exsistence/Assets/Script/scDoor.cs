@@ -41,7 +41,7 @@ public class scDoor : MonoBehaviour {
         // {
         while (true)
         {
-            if (doorTr.transform.rotation.y >= 90)
+            if (transform.eulerAngles.y >= 90)
             {
 
                 transform.Rotate(new Vector3(0, 10, 0));
@@ -49,8 +49,9 @@ public class scDoor : MonoBehaviour {
                 yield return null;
             }
         }
+        }
            
        // }
     }
-    }
+    
 
