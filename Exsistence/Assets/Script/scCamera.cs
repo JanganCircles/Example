@@ -5,6 +5,7 @@ using UnityEngine;
 public class scCamera : MonoBehaviour {
     private Transform tr;
     public float rotSpeed = 100.0f;
+    Vector3 cameraPos;
     // Use this for initialization
     void Start () {
         tr = GetComponent<Transform>();
@@ -12,18 +13,6 @@ public class scCamera : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        //Debug.Log("tr.rotation.x: "+ tr.rotation.x);
-        /*Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-        RaycastHit hit;
-        
-        if (Physics.Raycast(ray, out hit, Mathf.Infinity))
-        {
-            Debug.Log(hit.collider.gameObject.name);
-            Debug.DrawLine(ray.origin, hit.point);
-            if (hit.collider.tag == "phone")
-                Cursor.visible = true;
-
-        }*/
         if (scPlayer.play && scPhone.play)
         {
             if (tr.rotation.x <= 0.45f && tr.rotation.x >= -0.45f)
@@ -33,5 +22,11 @@ public class scCamera : MonoBehaviour {
             else if (tr.rotation.x > 0.45f) tr.rotation = Quaternion.Euler(45, 0, 0);
             else tr.rotation = Quaternion.Euler(-45, 0, 0);
         }
+    }
+    void FixCameera() {
+        cameraPos = new Vector3(tr.position.x,tr.position.y,tr.position.z);
+    }
+    void backCamera() {
+        tr.Translate(cameraPos);
     }
 }
