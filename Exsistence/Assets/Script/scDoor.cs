@@ -41,13 +41,14 @@ public class scDoor : MonoBehaviour {
         // {
         while (true)
         {
-            //if (transform.eulerAngles.y >= 90)
-            //{
+           for (int i = 0; i>=9; i++)
+            {
 
                 transform.Rotate(new Vector3(0, 10, 0));
-
+            
+            
                 yield return null;
-           // }
+            }
              }
         }
            
