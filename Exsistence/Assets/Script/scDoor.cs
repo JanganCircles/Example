@@ -41,14 +41,13 @@ public class scDoor : MonoBehaviour {
         // {
         while (true)
         {
-           for (int i = 0; i>=9; i++)
-            {
+           
 
                 transform.Rotate(new Vector3(0, 10, 0));
             
             
                 yield return null;
-            }
+          
              }
         }
            
