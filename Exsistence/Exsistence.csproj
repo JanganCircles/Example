@@ -89,6 +89,7 @@
     <Compile Include="Assets\Script\scExample.cs" />
     <Compile Include="Assets\Script\scGameManager.cs" />
     <Compile Include="Assets\Script\scHud.cs" />
+    <Compile Include="Assets\Script\scInterObject.cs" />
     <Compile Include="Assets\Script\scLook.cs" />
     <Compile Include="Assets\Script\scMemo.cs" />
     <Compile Include="Assets\Script\scPhone.cs" />

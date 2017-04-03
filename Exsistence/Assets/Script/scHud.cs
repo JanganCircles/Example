@@ -11,8 +11,10 @@ public class scHud : MonoBehaviour {
     private Transform playerTr;             // 플레이어의 위치 값을 받아오는 변수
     public MeshRenderer interactionMesh;   // 상호작용이 되면 Meshrenderer on
     public CapsuleCollider playerRd;       // collider radius 값과 거리를 같게 해줄 변수
-    public GameObject door;
-    private bool doorOn= false;
+    public scDoor door;
+    public bool doorOn= true;
+    public scInterObject interObject;
+    public bool objectOn = true;
     // Use this for initialization
     void Start()
     {
@@ -35,47 +37,45 @@ public class scHud : MonoBehaviour {
         {
             // interactionMesh.enabled = true;
             print("e눌림");
-            if (doorOn == false)
+            
+            if (doorOn == true)
             {
-                door.SendMessage("Open");
+                door.SendMessage("Open");                
             }
-            else if(doorOn == true)
+            if(objectOn == true)
             {
-                door.SendMessage("Close");
+                interObject.SendMessage("Play");
             }
+           
+            /* else if(doorOn == true)
+             {
+               //  door.SendMessage("Close");
+             }*/
         }
 
         /* float distance = Vector3.Distance(interactionTr.position, transform.position);
           if (distance + objside <= objside)
           */
     }
-        void OnTriggerEnter(Collider oncol)
+        void OnTriggerEnter(Collider col)
     {
-        
-       if (oncol.tag == "Player")
-            {
-                Debug.Log("?");
-                                     hud_on();
-            
+
+        if (col.gameObject.tag == "Player")
+        {
+            Debug.Log("?");            
+            interactionMesh.enabled = true;
+            //door = col.GetComponent<scDoor>();
         }
        /* if (interactionMesh != false && oncol.gameObject.tag == "interaction"&& Input.GetKeyDown(KeyCode.E))
         {         
             print("e눌림");
                     }*/
     }
-    void OnTriggerExit(Collider offcol)
+    void OnTriggerExit(Collider col)
     {
         Debug.Log("2");
-        hud_off();
-    }
-    public void hud_on()
-    {
-        interactionMesh.enabled = true;
+        interactionMesh.enabled = false;
       
     }
-    public void hud_off()
-    {
-        
-     interactionMesh.enabled = false;
-    }
+  
 }
