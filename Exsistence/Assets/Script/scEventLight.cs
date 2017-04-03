@@ -2,14 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class scEventLight : MonoBehaviour {
+public class scEventLight : MonoBehaviour, iEvent
+{
+    public scEventRunner Runner;
     public GameObject obj;
 
-	// Use this for initialization
-	void Start ()
+    // Use this for initialization
+    void Start()
     {
-	
-	}
+        Runner.SetEvent(this);
+    }
 
     // Update is called once per frame
     void Update()
@@ -17,13 +19,8 @@ public class scEventLight : MonoBehaviour {
 
     }
 
-    void OnTriggerEnter(Collider coll)
+    public void Run()
     {
-        Debug.Log("Triger 충돌하였음");
-        if (coll.name == "Collider")
-        {
-            obj.SetActive(false);
-        }
+        obj.SetActive(false);
     }
-
 }
