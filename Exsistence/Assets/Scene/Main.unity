@@ -37,7 +37,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.4498853, g: 0.49994618, b: 0.5755691, a: 1}
+  m_IndirectSpecularColor: {r: 0.44988453, g: 0.49994552, b: 0.5755682, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -1203,7 +1203,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 796910230}
   m_LocalRotation: {x: 0.12843058, y: -0, z: -0, w: 0.99171853}
-  m_LocalPosition: {x: 7.15, y: 5.66, z: -15.79}
+  m_LocalPosition: {x: 7.15, y: 5.66, z: -36.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1843,6 +1843,7 @@ GameObject:
   - component: {fileID: 1218945208}
   - component: {fileID: 1218945207}
   - component: {fileID: 1218945206}
+  - component: {fileID: 1218945209}
   m_Layer: 0
   m_Name: door
   m_TagString: Untagged
@@ -1913,6 +1914,23 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1218945204}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!95 &1218945209
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1218945204}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 26d32df9bbcf28a4dad66309a5dfd8b4, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1 &1352254725
 GameObject:
   m_ObjectHideFlags: 0
