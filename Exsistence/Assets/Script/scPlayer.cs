@@ -9,37 +9,33 @@ public class scPlayer : MonoBehaviour {
 	private float v = 0.0f;
 	public float moveSpeed = 10.0f;
 	public float rotSpeed = 100.0f;
-    
-    private int iflashlight = 0;
+    private Vector3 moveDirection = Vector3.zero;
+    //private int iflashlight = 0;
     public GameObject PauseCanvas;
     GameObject flashlight;
-
+    CharacterController controller;
     private Transform tr;
 
     // Use this for initialization
     void Start () {
 		tr = GetComponent<Transform>();
-        flashlight = transform.Find("flashlight").gameObject;
+        
+        //flashlight = transform.Find("flashlight").gameObject;
     }
 	
 	// Update is called once per frame
 	void Update () {
-                
+        controller = GetComponent<CharacterController>();
         if (play)
         {
-            h = Input.GetAxis("Horizontal");
-            v = Input.GetAxis("Vertical");
-            Vector3 moveDir = (Vector3.forward * v) + (Vector3.right * h);
-            tr.Translate(moveDir * Time.deltaTime * moveSpeed, Space.Self);
-            if(scPhone.play) tr.Rotate(Vector3.up * Time.deltaTime * rotSpeed * Input.GetAxis("Mouse X"));
-            if (Input.GetKeyDown(KeyCode.Mouse0))
-            {
-                if (iflashlight == 0)
-                { flashlight.SetActiveRecursively(true); iflashlight = 1; }
-                else
-                { flashlight.SetActiveRecursively(false); iflashlight = 0; }
-            }
+            moveDirection = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
+            moveDirection = transform.TransformDirection(moveDirection);
+            moveDirection *= moveSpeed;
+            controller.Move(moveDirection * Time.deltaTime);
+            if (scPhone.play) tr.Rotate(Vector3.up * Time.deltaTime * rotSpeed * Input.GetAxis("Mouse X"));
+            
         }
+
 
         if (Input.GetKeyDown(KeyCode.Escape) && scSceneMove.EnableCreateMenu)
         {

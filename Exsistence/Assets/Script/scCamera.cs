@@ -6,9 +6,12 @@ public class scCamera : MonoBehaviour {
     private Transform tr;
     public float rotSpeed = 100.0f;
     Vector3 cameraPos;
+    GameObject flashlight;
+    private int iflashlight = 0;
     // Use this for initialization
     void Start () {
         tr = GetComponent<Transform>();
+        flashlight = transform.Find("flashlight").gameObject;
     }
 	
 	// Update is called once per frame
@@ -21,6 +24,13 @@ public class scCamera : MonoBehaviour {
             }
             else if (tr.rotation.x > 0.45f) tr.rotation = Quaternion.Euler(45, 0, 0);
             else tr.rotation = Quaternion.Euler(-45, 0, 0);
+            if (Input.GetKeyDown(KeyCode.Mouse0))
+            {
+                if (iflashlight == 0)
+                { flashlight.SetActiveRecursively(true); iflashlight = 1; }
+                else
+                { flashlight.SetActiveRecursively(false); iflashlight = 0; }
+            }
         }
     }
     void FixCameera() {
