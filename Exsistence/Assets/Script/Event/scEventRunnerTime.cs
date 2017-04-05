@@ -10,6 +10,7 @@ public class scEventRunnerTime : MonoBehaviour {
     public int evtidx;  //이벤트 인덱스 변수
     public bool MainEvent = true;  //메인 이벤트, 서브 이벤트 구분 변수
     public float sec;
+    public GameObject ePrefab = null;   //이벤트 프리팹
 
     void Awake() { }
     void Start() { }
@@ -37,6 +38,7 @@ public class scEventRunnerTime : MonoBehaviour {
     IEnumerator Silhaeng()
     {
         yield return new WaitForSeconds(sec);
+        ePrefab.SendMessage("Run()");
         evt.Run();
 
         if (MainEvent)

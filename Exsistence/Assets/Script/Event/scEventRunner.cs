@@ -9,6 +9,7 @@ public class scEventRunner : MonoBehaviour {
     iEvent evt;
     public int evtidx;  //이벤트 인덱스 변수
     public bool MainEvent = true;  //메인 이벤트, 서브 이벤트 구분 변수
+    public GameObject ePrefab = null;   //이벤트 프리팹
 
     void Awake () { }
     void Start () { }
@@ -29,6 +30,7 @@ public class scEventRunner : MonoBehaviour {
 
         if (evtidx == scGameManager.instance.eventIndex)
         {
+            ePrefab.SendMessage("Run()");
             evt.Run();
 
             if (MainEvent)
