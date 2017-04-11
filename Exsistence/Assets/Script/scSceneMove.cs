@@ -24,6 +24,9 @@ public class scSceneMove : MonoBehaviour
                 SceneManager.LoadScene(buttonName);
                 break;
 
+            case "saveGame":
+                break;
+
             case "loadGame":
                 break;
 
