@@ -9,12 +9,13 @@ public class scMemo : MonoBehaviour {
     private string textValue;
     public bool memoState = false;
     private MeshRenderer memoNote;
+    public string memoname;
     // Use this for initialization
     void Start()
     {
         memoNote = gameObject.GetComponentInChildren<MeshRenderer>();
         //file = @"C:\Users\admin\Documents\GitHub\Exsistence";
-        TextAsset textfile = Resources.Load("Memo") as TextAsset;
+        TextAsset textfile = Resources.Load(memoname) as TextAsset;
         textValue = " " + textfile;
         Debug.Log(textValue);
     }
@@ -30,5 +31,12 @@ public class scMemo : MonoBehaviour {
             memoNote.enabled = true;
         // memoCheck();
     }
-  
+  void OnTriggerEnter(Collider col)
+    {
+        if(col.gameObject.tag == "Player")
+        {
+            memoNote.enabled = true;
+        }
+    }
+
 }

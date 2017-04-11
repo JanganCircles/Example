@@ -3,9 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class scMemoManage : MonoBehaviour {
-
-	// Use this for initialization
-	void Start () {
+    public static scMemoManage instance;
+    // Use this for initialization
+    void Awake()
+    {
+       scMemoManage.instance = this;   
+    }
+    void Start () {
 		
 	}
 	
