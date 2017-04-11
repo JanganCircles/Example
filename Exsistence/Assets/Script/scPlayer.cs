@@ -9,10 +9,14 @@ public class scPlayer : MonoBehaviour {
 	private float v = 0.0f;
 	public float moveSpeed = 10.0f;
 	public float rotSpeed = 100.0f;
+
     private Vector3 moveDirection = Vector3.zero;
     //private int iflashlight = 0;
+
     public GameObject PauseCanvas;
+    public GameObject SaveCanvas;
     GameObject flashlight;
+
     CharacterController controller;
     private Transform tr;
 
@@ -46,7 +50,11 @@ public class scPlayer : MonoBehaviour {
         }
         else if(Input.GetKeyDown(KeyCode.Escape) && !scSceneMove.EnableCreateMenu)
         {
-            if(GameObject.Find("SettingCanvas"))
+            if (GameObject.Find("SaveCanvas"))
+            {
+                SaveCanvas.SetActive(false);
+            }
+            else if(GameObject.Find("SettingCanvas"))
             {
                 scSceneMove.SettingCanvas.SetActive(false); ;
             }
