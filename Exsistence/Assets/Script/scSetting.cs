@@ -52,6 +52,7 @@ public class scSetting : MonoBehaviour
 
                 audioComponent.Stop();
                 audioComponent.Play();
+                Debug.Log(audioComponent.gameObject.name);
             }
         }
 
