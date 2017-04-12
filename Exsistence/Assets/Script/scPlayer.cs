@@ -13,8 +13,6 @@ public class scPlayer : MonoBehaviour {
     private Vector3 moveDirection = Vector3.zero;
     //private int iflashlight = 0;
 
-    public GameObject PauseCanvas;
-    public GameObject SaveCanvas;
     GameObject flashlight;
 
     CharacterController controller;
@@ -38,33 +36,6 @@ public class scPlayer : MonoBehaviour {
             controller.Move(moveDirection * Time.deltaTime);
             if (scPhone.play) tr.Rotate(Vector3.up * Time.deltaTime * rotSpeed * Input.GetAxis("Mouse X"));
             
-        }
-
-
-        if (Input.GetKeyDown(KeyCode.Escape) && scSceneMove.EnableCreateMenu)
-        {
-            scSceneMove.EnableCreateMenu = false;
-            play = false;
-
-            PauseCanvas.SetActive(true);
-        }
-        else if(Input.GetKeyDown(KeyCode.Escape) && !scSceneMove.EnableCreateMenu)
-        {
-            if (GameObject.Find("SaveCanvas"))
-            {
-                SaveCanvas.SetActive(false);
-            }
-            else if(GameObject.Find("SettingCanvas"))
-            {
-                scSceneMove.SettingCanvas.SetActive(false); ;
-            }
-            else
-            {
-                scSceneMove.EnableCreateMenu = true;
-                play = true;
-
-                PauseCanvas.SetActive(false);
-            }
         }
     }
 }

@@ -9,6 +9,7 @@ public class scSceneMove : MonoBehaviour
     public string buttonName;
 
     public static bool EnableCreateMenu = true;
+
     public static GameObject SettingCanvas;
 
     public void MoveScene()
@@ -25,6 +26,7 @@ public class scSceneMove : MonoBehaviour
                 break;
 
             case "saveGame":
+                scOptionOnOffer.PSaveCanvas.SetActive(true);
                 break;
 
             case "loadGame":
