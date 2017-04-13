@@ -5,21 +5,32 @@ using UnityEngine;
 using System.IO;
 
 public class scSaveandLoad : MonoBehaviour
-{   
+{
+    string dir;
+    string fileName;
+
+    void Awake()
+    {
+        dir = Application.dataPath + "/Resources/Save";
+        fileName = dir + "/Save File" + this.gameObject.name.Substring(8) + ".txt";
+    }
+
     public void Save()
     {
-        string fileName = "Save File " + this.gameObject.name.Substring(9);
-
-        StreamWriter stream = new StreamWriter(fileName);
+        StreamWriter stream = new StreamWriter(@fileName);
+        scGameManager instance = new scGameManager();
 
         if (GameObject.Find("Player"))
         {
             Transform TPlayer = GameObject.Find("Player").transform;
-            stream.WriteLine(Application.loadedLevelName);
-            stream.WriteLine(TPlayer);
-            stream.WriteLine(scGameManager.instance.eventIndex);
 
-            Debug.Log("Scene Name : " + Application.loadedLevelName + ", Player Transform" + TPlayer.position + ", Event Index" + scGameManager.instance.eventIndex);
+            stream.WriteLine(Application.loadedLevelName);
+            stream.WriteLine(TPlayer.position);
+            stream.WriteLine(TPlayer.rotation);
+            stream.WriteLine(instance.eventIndex);
+
+            stream.Flush();
+            stream.Close();
         }
     }
 }
