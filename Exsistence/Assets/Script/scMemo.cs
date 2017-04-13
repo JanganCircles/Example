@@ -35,7 +35,8 @@ public class scMemo : MonoBehaviour {
     {
         if(col.gameObject.tag == "Player")
         {
-            memoNote.enabled = true;
+            memoState = true;
+            scMemoManage.instance.StringLoad();
         }
     }
 

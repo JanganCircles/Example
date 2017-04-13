@@ -2,8 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class scMemoManage : MonoBehaviour {
     public static scMemoManage instance;
+    List<string> list = new List<string>();
     // Use this for initialization
     void Awake()
     {
@@ -17,4 +19,8 @@ public class scMemoManage : MonoBehaviour {
 	void Update () {
 		
 	}
+    public void StringLoad()
+    {
+        list.Add();
+    }
 }
