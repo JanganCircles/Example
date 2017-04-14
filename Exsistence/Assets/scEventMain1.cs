@@ -3,22 +3,24 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class scEventMain1 : MonoBehaviour {
-    public GameObject gameobj;
+    public GameObject TurnOff;
     public SpriteRenderer blackFade;
-	// Use this for initialization
-	void Start () {
-        
+    scCamera camera72;
+
+    // Use this for initialization
+    void Start () {
+       scCamera camera72 = GetComponent<scCamera>();
 	}
 	
 	// Update is called once per frame
 	void Update()
     {
-
+        
     }
 
     void EVT()
     {
-        gameobj.SetActive(false);
+        TurnOff.SetActive(false);
     }
     IEnumerator FadeIn()
     {
@@ -30,6 +32,7 @@ public class scEventMain1 : MonoBehaviour {
             yield return new WaitForSeconds(1f);
         }
     }
+    
 
 
     

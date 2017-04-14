@@ -8,6 +8,7 @@ public class scCamera : MonoBehaviour {
     Vector3 cameraPos;
     GameObject flashlight;
     private int iflashlight = 0;
+    public Camera camera72;
     // Use this for initialization
     void Start () {
         tr = GetComponent<Transform>();
@@ -33,10 +34,15 @@ public class scCamera : MonoBehaviour {
             }
         }
     }
-    void FixCameera() {
+    public void FixCameera() {
         cameraPos = new Vector3(tr.position.x,tr.position.y,tr.position.z);
     }
-    void backCamera() {
+    public void backCamera() {
         tr.Translate(cameraPos);
     }
+    public void zoom()
+    {
+        //camera72.fieldOfView
+    }
+    
 }
