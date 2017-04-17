@@ -21,6 +21,6 @@ public class scMemoManage : MonoBehaviour {
 	}
     public void StringLoad()
     {
-        list.Add();
+        //list.Add();
     }
 }
