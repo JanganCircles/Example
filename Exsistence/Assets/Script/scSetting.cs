@@ -16,8 +16,6 @@ public class scSetting : MonoBehaviour
 
         DontDestroyOnLoad(this.gameObject);
 
-        scSceneMove.SettingCanvas = GameObject.Find("SettingCanvas");
-
         this.transform.parent.gameObject.SetActive(false);
     }
 
