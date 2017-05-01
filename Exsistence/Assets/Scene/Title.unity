@@ -256,6 +256,11 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 41336672}
+--- !u!1 &46029161 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1776207832594186, guid: ad463960c593e0c45ba0cd490d241695,
+    type: 2}
+  m_PrefabInternal: {fileID: 210260653}
 --- !u!1001 &210260653
 Prefab:
   m_ObjectHideFlags: 0
@@ -731,10 +736,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60dbd995730363a40be2a865749d3a4a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PauseCanvas: {fileID: 1502263521923922, guid: da55533f2c6b2fe4ca3ce097a8d510f4,
-    type: 2}
-  SaveCanvas: {fileID: 1951815387971954, guid: 2035b9218690fc944a001dfc93e5b2c0, type: 2}
-  LoadCanvas: {fileID: 1047215674}
+  Canvas:
+  - {fileID: 46029161}
+  - {fileID: 1047215674}
+  - {fileID: 1047215674}
 --- !u!4 &698348006
 Transform:
   m_ObjectHideFlags: 0
@@ -1040,10 +1045,6 @@ Prefab:
     - target: {fileID: 224463436052338882, guid: df57e86b2e6aae34eaa09670c885c19e,
         type: 2}
       propertyPath: m_Pivot.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1336113013470712, guid: df57e86b2e6aae34eaa09670c885c19e, type: 2}
-      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

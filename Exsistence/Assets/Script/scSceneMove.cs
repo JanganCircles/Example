@@ -8,10 +8,6 @@ public class scSceneMove : MonoBehaviour
     //누른 버튼의 이름을 미리 받아옴
     public string buttonName;
 
-    public static bool EnableCreateMenu = true;
-
-    public static GameObject SettingCanvas;
-
     public void MoveScene()
     {
         //버튼의 이름을 아래 케이스들과 비교
@@ -20,16 +16,16 @@ public class scSceneMove : MonoBehaviour
             //버튼의 이름이 main이거나 title이면 buttonName의 씬으로 이동
             case "main":
             case "title":
-                EnableCreateMenu = true;
                 scPlayer.play = true;
                 SceneManager.LoadScene(buttonName);
                 break;
 
             case "saveGame":
-                scOptionOnOffer.PSaveCanvas.SetActive(true);
+                scOptionOnOffer.PCanvas[2].SetActive(true);
                 break;
 
             case "loadGame":
+                scOptionOnOffer.PCanvas[1].SetActive(true);
                 break;
 
             //버튼의 이름이 leaveGame이면 게임 종료
@@ -40,13 +36,17 @@ public class scSceneMove : MonoBehaviour
             
             //가져온 SettingCanvas를 활성화
             case "setting":
-                SettingCanvas.SetActive(true);
-                scPlayer.play = false;
+                scOptionOnOffer.PCanvas[0].SetActive(true);
+                //scPlayer.play = false;
                 break;
 
             //버튼의 이름이 Back이면 자신의 부모 객체 비활성화
             case "back":
                 this.transform.parent.gameObject.SetActive(false);
+                if(this.gameObject.name == "BackToGame")
+                {
+                    scPlayer.play = true;
+                }
                 break;
 
             //아무 버튼도 아닐 시 에러 출력

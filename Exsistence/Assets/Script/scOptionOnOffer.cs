@@ -1,20 +1,32 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class scOptionOnOffer : MonoBehaviour
 {
 
-    public GameObject PauseCanvas;
+    /*public GameObject PauseCanvas;
     public GameObject SaveCanvas;
+    public GameObject LoadCanvas;*/
 
-    public static GameObject PSaveCanvas;
+    //Canvas[0] : SettingCanvas, Canvas[1] : LoadCanvase, Canvas[2] : SaveCanvas ,Canvas[3] : PauseCanvas
+    public GameObject[] Canvas;
 
-    private void Start()
+    /*public static GameObject PSaveCanvas;
+    public static GameObject PLoadCanvas;*/
+
+    //PCanvase[0] : Settingcanvas, PCanvase[1] : LoadCanvas, PCanvas[2] : SaveCanvas
+    public static GameObject[] PCanvas = new GameObject[3];
+
+    void Start()
     {
-        PSaveCanvas = SaveCanvas;
+        /* PSaveCanvas = SaveCanvas;
+         PLoadCanvas = LoadCanvas;*/
+        PCanvas[0] = Canvas[0];
+        PCanvas[1] = Canvas[1];
+        PCanvas[2] = Canvas[2];
     }
-
 
     void Update ()
     {
@@ -23,30 +35,33 @@ public class scOptionOnOffer : MonoBehaviour
 
     void OnOffer()
     {
-        if (Input.GetKeyDown(KeyCode.Escape) && scSceneMove.EnableCreateMenu)
+        if (Input.GetKeyDown(KeyCode.Escape) && scPlayer.play && SceneManager.GetActiveScene().name != "Title")
         {
-            scSceneMove.EnableCreateMenu = false;
             scPlayer.play = false;
 
-            PauseCanvas.SetActive(true);
+            Canvas[3].SetActive(true);
         }
-        else if (Input.GetKeyDown(KeyCode.Escape) && !scSceneMove.EnableCreateMenu)
+        else if (Input.GetKeyDown(KeyCode.Escape) && !scPlayer.play)
         {
             if (GameObject.Find("SaveCanvas"))
             {
-                SaveCanvas.SetActive(false);
+                PCanvas[2].SetActive(false);
+            }
+            else if(GameObject.Find("LoadCanvas"))
+            {
+                PCanvas[1].SetActive(false);
             }
             else if (GameObject.Find("SettingCanvas"))
             {
-                scSceneMove.SettingCanvas.SetActive(false); ;
+                PCanvas[0].SetActive(false); ;
             }
             else
             {
-                scSceneMove.EnableCreateMenu = true;
                 scPlayer.play = true;
 
-                PauseCanvas.SetActive(false);
+                Canvas[3].SetActive(false);
             }
+
         }
     }
 }
