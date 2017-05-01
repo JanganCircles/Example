@@ -34,7 +34,7 @@ public class scEventRunnerLogic : MonoBehaviour {
             {
                 if (MainEvent)
                 {
-                    ePrefab.SendMessage("Run()");
+                   // ePrefab.SendMessage("Run");
                     evt.Run();
                     scGameManager.instance.eventIndex++;
                 }

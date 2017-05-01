@@ -6,22 +6,68 @@ using UnityEngine;
 
 public class scEventRunner : MonoBehaviour {
 
+    public enum EventStasis
+        //이벤트 상태
+    {
+        COLLISION,
+        TIME,
+        LOGICCAL,
+    }
     iEvent evt;
+    private List<iEvent> evts;
     public int evtidx;  //이벤트 인덱스 변수
     public bool MainEvent = true;  //메인 이벤트, 서브 이벤트 구분 변수
     public GameObject ePrefab = null;   //이벤트 프리팹
-
-    void Awake () { }
+    public EventStasis eStasis;         //이벤트 상태
+    
+    public float TImer = 0;                 //타이머러너일때만 사용
+    void Awake () {
+        evts = new List<iEvent>();
+    }
     void Start () { }
     void Update () {    }
 
     public void SetEvent(iEvent ev)
     {
+        evts.Add(ev);
         evt = ev;
     }
+    public void isRunEvent()
+    {
+        if (eStasis != EventStasis.LOGICCAL)
+        {
+            return;
+        }
+        RunAllEvent();
 
+    }
+    public void isTimerRun()
+    {
+        if (eStasis != EventStasis.TIME)
+        {
+            return;
+        }
+        StartCoroutine("TimerRun");
+    }
+
+    IEnumerator TimerRun()
+    {
+        float MaxTIme = TImer;
+        while (MaxTIme > 0)
+        {
+            MaxTIme -= Time.deltaTime;
+            yield return null;
+        }
+        RunAllEvent();
+
+    }
     void OnTriggerEnter(Collider coll)    //충돌처리
     {
+        if (eStasis != EventStasis.COLLISION)
+        {
+            gameObject.GetComponent<SphereCollider>().enabled = false;
+            return;
+        }
         Debug.Log("충돌하였음");
         
         Debug.Log(evtidx);
@@ -30,7 +76,7 @@ public class scEventRunner : MonoBehaviour {
 
         if (evtidx == scGameManager.instance.eventIndex)
         {
-            ePrefab.SendMessage("Run()");
+          //  ePrefab.SendMessage("Run");
             evt.Run();
 
             if (MainEvent)
@@ -39,6 +85,13 @@ public class scEventRunner : MonoBehaviour {
             Debug.Log("GameManager의 eventIndex : " + scGameManager.instance.eventIndex);
             Debug.Log("Runner의 evtidx : " + evtidx);
             
+        }
+    }
+    public void RunAllEvent()
+    {
+        for (int i = 0; i < evts.Count; i++)
+        {
+            evts[i].Run();
         }
     }
 }
