@@ -18,6 +18,12 @@ public class scPlayer : MonoBehaviour {
     CharacterController controller;
     private Transform tr;
 
+    public static GameObject Player;
+
+    void Awake()
+    {
+        Player = this.gameObject;
+    }
     // Use this for initialization
     void Start () {
 		tr = GetComponent<Transform>();

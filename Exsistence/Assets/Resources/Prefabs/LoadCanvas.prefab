@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 114765184645828926}
   - component: {fileID: 114751201132405824}
   m_Layer: 5
-  m_Name: SaveFile2
+  m_Name: LoadFile2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -129,7 +129,7 @@ GameObject:
   - component: {fileID: 114032189649733142}
   - component: {fileID: 114824841239095624}
   m_Layer: 5
-  m_Name: SaveFile4
+  m_Name: LoadFile4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -165,7 +165,7 @@ GameObject:
   - component: {fileID: 114965333002013866}
   - component: {fileID: 114833789920060812}
   m_Layer: 5
-  m_Name: SaveFile1
+  m_Name: LoadFile1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -184,7 +184,7 @@ GameObject:
   - component: {fileID: 114635798148660270}
   - component: {fileID: 114875487312192694}
   m_Layer: 5
-  m_Name: SaveFile3
+  m_Name: LoadFile3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -293,7 +293,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 114824841239095624}
-        m_MethodName: Save
+        m_MethodName: Load
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -391,7 +391,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Save File 3
+  m_Text: LoadFile3
 --- !u!114 &114472318606861686
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -451,7 +451,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Save File 4
+  m_Text: LoadFile4
 --- !u!114 &114561445534401608
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -503,8 +503,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114875487312192694}
-        m_MethodName: Save
+      - m_Target: {fileID: 114824841239095624}
+        m_MethodName: Load
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -669,8 +669,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114751201132405824}
-        m_MethodName: Save
+      - m_Target: {fileID: 114824841239095624}
+        m_MethodName: Load
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -809,7 +809,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Save File 1
+  m_Text: LoadFile1
 --- !u!114 &114866135421109206
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -842,7 +842,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Save File 2
+  m_Text: LoadFile2
 --- !u!114 &114875487312192694
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -893,8 +893,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114833789920060812}
-        m_MethodName: Save
+      - m_Target: {fileID: 114824841239095624}
+        m_MethodName: Load
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

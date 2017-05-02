@@ -7,5 +7,10 @@ EditorBuildSettings:
   m_Scenes:
   - enabled: 1
     path: Assets/Scene/Main.unity
+    guid: 1b43ef506074dac49aa1156571ed2faf
   - enabled: 1
     path: Assets/Scene/Title.unity
+    guid: 2afbf902df73ff94a955e6965f19a997
+  - enabled: 1
+    path: Assets/Scene/SaveTestScene.unity
+    guid: 25830fb7527fe744c8d3f91a12603322

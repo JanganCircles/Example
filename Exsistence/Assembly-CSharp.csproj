@@ -73,7 +73,11 @@
      <Compile Include="Assets\Script\scSceneMove.cs" />
      <Compile Include="Assets\Script\scSetting.cs" />
      <Compile Include="Assets\scEventMain1.cs" />
+     <None Include="Assets\Resources\Save\Save File4.txt" />
+     <None Include="Assets\Resources\Save\Save File1.txt" />
      <None Include="Assets\Resources\Memo.txt" />
+     <None Include="Assets\Resources\Save\Save File3.txt" />
+     <None Include="Assets\Resources\Save\Save File2.txt" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>

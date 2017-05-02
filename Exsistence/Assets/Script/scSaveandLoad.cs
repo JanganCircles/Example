@@ -7,12 +7,15 @@ using System.IO;
 public class scSaveandLoad : MonoBehaviour
 {
     GameObject TPlayer;
+
     public void Awake()
     {
-        TPlayer = GameObject.Find("Player");
+        
     }
     public void Save()
     {
+        TPlayer = GameObject.Find("Player");
+
         string dir = Application.dataPath + "/Resources/Save";
         string fileName = dir + "/Save File" + this.gameObject.name.Substring(8) + ".txt";
 
@@ -34,36 +37,32 @@ public class scSaveandLoad : MonoBehaviour
     }
 
     public void Load()
-    {
-        string dir = Application.dataPath + "/Resources/Save";
-        string fileName = dir + ".Save File" + this.gameObject.name.Substring(8) + ".txt";
+    { 
+        scGameManager instance = new scGameManager();
 
-        string num = null;
-        float[] PNum = { };
+        string dir = Application.dataPath + "/Resources/Save";
+        string fileName = dir + "/Save File" + this.gameObject.name.Substring(8) + ".txt";
 
         FileStream Fs = new FileStream(fileName, FileMode.Open);
         StreamReader Stream = new StreamReader(Fs);
 
         SceneManager.LoadScene(Stream.ReadLine());
-        foreach (char ch in Stream.ReadLine())
-        {
-            int i = 0;
 
-            if(ch != '(' || ch != ')')
-            {
-                if (ch != ',')
-                {
-                    num += ch;
-                }
-                else
-                {
-                    PNum[i] = float.Parse(num);
-                    i++;
-                }
-            }
-        }
-
+        TPlayer = GameObject.Find("Player");
         
+        Debug.Log(TPlayer.name);
+
+        string[] reCharP = Stream.ReadLine().Trim('(', ')').Split(',');
+        string[] reCharR = Stream.ReadLine().Trim('(', ')').Split(',');
+        
+        TPlayer.transform.position
+            = new Vector3(float.Parse(reCharP[0]), float.Parse(reCharP[1]), float.Parse(reCharP[2]));
+        TPlayer.transform.rotation
+            = new Quaternion(float.Parse(reCharR[0]), float.Parse(reCharR[1]), float.Parse(reCharR[2]), float.Parse(reCharR[3]));
+
+        instance.eventIndex = int.Parse(Stream.ReadLine());
+
+        Stream.Close();
     }
 }
 
