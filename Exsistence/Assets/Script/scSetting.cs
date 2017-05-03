@@ -50,7 +50,6 @@ public class scSetting : MonoBehaviour
 
                 audioComponent.Stop();
                 audioComponent.Play();
-                Debug.Log(audioComponent.gameObject.name);
             }
         }
 
@@ -59,13 +58,11 @@ public class scSetting : MonoBehaviour
         {
             // Screen.SetResolution(Screen.width / 16, Screen.height / 9, true);
             Camera.main.aspect = 1600/900;
-            Debug.Log(Camera.main.aspect);
         }
         else if(!resol)
         {
             //Screen.SetResolution(Screen.width / 4, Screen.height / 3, true);
             Camera.main.aspect = 1024/768;
-            Debug.Log(Camera.main.aspect);
         }
     }
 }

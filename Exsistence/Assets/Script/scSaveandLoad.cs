@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using System;
 using System.Collections.Generic;
 using UnityEngine.SceneManagement;
 using UnityEngine;
@@ -8,10 +9,6 @@ public class scSaveandLoad : MonoBehaviour
 {
     GameObject TPlayer;
 
-    public void Awake()
-    {
-        
-    }
     public void Save()
     {
         TPlayer = GameObject.Find("Player");
@@ -24,8 +21,6 @@ public class scSaveandLoad : MonoBehaviour
 
         if (GameObject.Find("Player"))
         {
-            
-
             stream.WriteLine(Application.loadedLevelName);
             stream.WriteLine(TPlayer.transform.position);
             stream.WriteLine(TPlayer.transform.rotation);
@@ -37,32 +32,37 @@ public class scSaveandLoad : MonoBehaviour
     }
 
     public void Load()
-    { 
-        scGameManager instance = new scGameManager();
+    {
+        try
+        {
+            TPlayer = scPlayer.Player;
+            scGameManager instance = new scGameManager();
 
-        string dir = Application.dataPath + "/Resources/Save";
-        string fileName = dir + "/Save File" + this.gameObject.name.Substring(8) + ".txt";
+            string dir = Application.dataPath + "/Resources/Save";
+            string fileName = dir + "/Save File" + this.gameObject.name.Substring(8) + ".txt";
 
-        FileStream Fs = new FileStream(fileName, FileMode.Open);
-        StreamReader Stream = new StreamReader(Fs);
+            Debug.Log(this.gameObject.name.Substring(8));
 
-        SceneManager.LoadScene(Stream.ReadLine());
+            FileStream Fs = new FileStream(fileName, FileMode.Open);
+            StreamReader Stream = new StreamReader(Fs);
 
-        TPlayer = GameObject.Find("Player");
-        
-        Debug.Log(TPlayer.name);
+            SceneManager.LoadScene(Stream.ReadLine());
 
-        string[] reCharP = Stream.ReadLine().Trim('(', ')').Split(',');
-        string[] reCharR = Stream.ReadLine().Trim('(', ')').Split(',');
-        
-        TPlayer.transform.position
-            = new Vector3(float.Parse(reCharP[0]), float.Parse(reCharP[1]), float.Parse(reCharP[2]));
-        TPlayer.transform.rotation
-            = new Quaternion(float.Parse(reCharR[0]), float.Parse(reCharR[1]), float.Parse(reCharR[2]), float.Parse(reCharR[3]));
+            string[] reCharP = Stream.ReadLine().Trim('(', ')').Split(',');
+            string[] reCharR = Stream.ReadLine().Trim('(', ')').Split(',');
 
-        instance.eventIndex = int.Parse(Stream.ReadLine());
+            TPlayer.transform.position
+                = new Vector3(float.Parse(reCharP[0]), float.Parse(reCharP[1]), float.Parse(reCharP[2]));
+            TPlayer.transform.rotation
+                = new Quaternion(float.Parse(reCharR[0]), float.Parse(reCharR[1]), float.Parse(reCharR[2]), float.Parse(reCharR[3]));
 
-        Stream.Close();
+            instance.eventIndex = int.Parse(Stream.ReadLine());
+
+            Stream.Close();
+        }catch(Exception e)
+        {
+            Debug.Log(e + "\n" +"파일 로드에 실패하였습니다.");
+        }
     }
 }
 
