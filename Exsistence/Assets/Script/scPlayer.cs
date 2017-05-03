@@ -18,16 +18,27 @@ public class scPlayer : MonoBehaviour {
     CharacterController controller;
     private Transform tr;
 
-    public static GameObject Player;
-
-    void Awake()
+    public struct PlayerTransform
     {
-        Player = this.gameObject;
-    }
+        public static Vector3 PP;
+        public static Quaternion PR;
+    };
     // Use this for initialization
+
     void Start () {
-		tr = GetComponent<Transform>();
-        
+
+        play = true;
+
+        tr = GetComponent<Transform>();
+
+        if(scSaveandLoad.isLoad == true)
+        {
+            tr.position = PlayerTransform.PP;
+            tr.rotation = PlayerTransform.PR;
+
+            scSaveandLoad.isLoad = false;
+        }
+
         //flashlight = transform.Find("flashlight").gameObject;
     }
 	

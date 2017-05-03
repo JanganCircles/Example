@@ -8,6 +8,7 @@ using System.IO;
 public class scSaveandLoad : MonoBehaviour
 {
     GameObject TPlayer;
+    public static bool isLoad;
 
     public void Save()
     {
@@ -35,13 +36,11 @@ public class scSaveandLoad : MonoBehaviour
     {
         try
         {
-            TPlayer = scPlayer.Player;
+            isLoad = true;
             scGameManager instance = new scGameManager();
 
             string dir = Application.dataPath + "/Resources/Save";
             string fileName = dir + "/Save File" + this.gameObject.name.Substring(8) + ".txt";
-
-            Debug.Log(this.gameObject.name.Substring(8));
 
             FileStream Fs = new FileStream(fileName, FileMode.Open);
             StreamReader Stream = new StreamReader(Fs);
@@ -51,9 +50,10 @@ public class scSaveandLoad : MonoBehaviour
             string[] reCharP = Stream.ReadLine().Trim('(', ')').Split(',');
             string[] reCharR = Stream.ReadLine().Trim('(', ')').Split(',');
 
-            TPlayer.transform.position
+            scPlayer.PlayerTransform.PP
                 = new Vector3(float.Parse(reCharP[0]), float.Parse(reCharP[1]), float.Parse(reCharP[2]));
-            TPlayer.transform.rotation
+
+            scPlayer.PlayerTransform.PR
                 = new Quaternion(float.Parse(reCharR[0]), float.Parse(reCharR[1]), float.Parse(reCharR[2]), float.Parse(reCharR[3]));
 
             instance.eventIndex = int.Parse(Stream.ReadLine());

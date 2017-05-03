@@ -66,6 +66,7 @@
      <Compile Include="Assets\Script\scLook.cs" />
      <Compile Include="Assets\Script\scMemo.cs" />
      <Compile Include="Assets\Script\scMemoManage.cs" />
+     <Compile Include="Assets\Script\scObject.cs" />
      <Compile Include="Assets\Script\scOptionOnOffer.cs" />
      <Compile Include="Assets\Script\scPhone.cs" />
      <Compile Include="Assets\Script\scPlayer.cs" />
@@ -73,7 +74,6 @@
      <Compile Include="Assets\Script\scSceneMove.cs" />
      <Compile Include="Assets\Script\scSetting.cs" />
      <Compile Include="Assets\scEventMain1.cs" />
-     <None Include="Assets\Resources\Save\Save File1.txt" />
      <None Include="Assets\Resources\Memo.txt" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>

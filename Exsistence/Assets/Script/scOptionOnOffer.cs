@@ -41,7 +41,7 @@ public class scOptionOnOffer : MonoBehaviour
 
             Canvas[3].SetActive(true);
         }
-        else if (Input.GetKeyDown(KeyCode.Escape) && !scPlayer.play)
+        else if (Input.GetKeyDown(KeyCode.Escape))
         {
             if (GameObject.Find("SaveCanvas"))
             {
@@ -55,7 +55,7 @@ public class scOptionOnOffer : MonoBehaviour
             {
                 PCanvas[0].SetActive(false); ;
             }
-            else
+            else if(SceneManager.GetActiveScene().name != "Title")
             {
                 scPlayer.play = true;
 
