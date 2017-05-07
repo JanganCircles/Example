@@ -13,16 +13,25 @@ public class scEventRunner : MonoBehaviour {
         TIME,
         LOGICCAL,
     }
-    iEvent evt;
+    
     private List<iEvent> evts;
+    [SerializeField]
+    public GameObject[] Evts = null;
     public int evtidx;  //이벤트 인덱스 변수
     public bool MainEvent = true;  //메인 이벤트, 서브 이벤트 구분 변수
-    public GameObject ePrefab = null;   //이벤트 프리팹
     public EventStasis eStasis;         //이벤트 상태
     
     public float TImer = 0;                 //타이머러너일때만 사용
     void Awake () {
         evts = new List<iEvent>();
+        for (int i = 0; i < Evts.Length; i++)
+        {
+            Evts[i].SendMessage("GetiEvent",this);
+        }
+    }
+    public void SetUpEvt(object obj)
+    {
+        evts.Add(obj as iEvent);
     }
     void Start () { }
     void Update () {    }
@@ -30,7 +39,6 @@ public class scEventRunner : MonoBehaviour {
     public void SetEvent(iEvent ev)
     {
         evts.Add(ev);
-        evt = ev;
     }
     public void isRunEvent()
     {
@@ -63,6 +71,11 @@ public class scEventRunner : MonoBehaviour {
     }
     void OnTriggerEnter(Collider coll)    //충돌처리
     {
+
+        if (MainEvent && evtidx != scGameManager.instance.eventIndex)
+        {
+            return;
+        }
         if (eStasis != EventStasis.COLLISION)
         {
             gameObject.GetComponent<SphereCollider>().enabled = false;
@@ -72,12 +85,7 @@ public class scEventRunner : MonoBehaviour {
         
         Debug.Log(evtidx);
         Debug.Log(scGameManager.instance.eventIndex);
-        
-
-        if (evtidx == scGameManager.instance.eventIndex)
-        {
-          //  ePrefab.SendMessage("Run");
-            evt.Run();
+        RunAllEvent();
 
             if (MainEvent)
             { scGameManager.instance.eventIndex++; }
@@ -85,7 +93,6 @@ public class scEventRunner : MonoBehaviour {
             Debug.Log("GameManager의 eventIndex : " + scGameManager.instance.eventIndex);
             Debug.Log("Runner의 evtidx : " + evtidx);
             
-        }
     }
     public void RunAllEvent()
     {
@@ -99,4 +106,5 @@ public class scEventRunner : MonoBehaviour {
 public interface iEvent
 {
     void Run();
+    void GetiEvent(object M);
 }

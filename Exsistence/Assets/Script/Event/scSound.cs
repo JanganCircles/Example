@@ -69,5 +69,6 @@ public class scSound : MonoBehaviour, iEvent
         audioPlayer.PlayOneShot(SoundClip);
         yield return new WaitForSeconds(0.3f);
     }
+    public void GetiEvent(object obj) { (obj as scEventRunner).SetUpEvt(this); }
 
 }

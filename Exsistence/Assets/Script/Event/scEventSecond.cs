@@ -22,4 +22,5 @@ public class scEventSecond : MonoBehaviour, iEvent {
     {
         Debug.Log("second 이벤트 실행 됨");
     }
+    public void GetiEvent(object obj) { (obj as scEventRunner).SetUpEvt(this); }
 }
