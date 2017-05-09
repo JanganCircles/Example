@@ -31,7 +31,7 @@ public class scEventMove : MonoBehaviour, iEvent
     void Start()
     {
 
-        Runner.SetEvent(this);
+       // Runner.SetEvent(this);
         startTime = Time.time;
         journeyLength = Vector3.Distance(startMarker.position, endMarker.position); // 두사이간의 거리 
         rotation = Quaternion.identity;
@@ -87,5 +87,6 @@ public class scEventMove : MonoBehaviour, iEvent
         }//실행
     }
 
+    public void GetiEvent(object obj) { (obj as scEventRunner).SetUpEvt(this); }
 
 }

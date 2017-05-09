@@ -22,5 +22,5 @@ public class scEventFirst : MonoBehaviour , iEvent{
     {
         Debug.Log("first 이벤트 실행 됨");
     }
-
+    public void GetiEvent(object obj) { (obj as scEventRunner).SetUpEvt(this); }
 }

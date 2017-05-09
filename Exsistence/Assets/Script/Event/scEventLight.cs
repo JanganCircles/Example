@@ -23,4 +23,5 @@ public class scEventLight : MonoBehaviour, iEvent
     {
         obj.SetActive(false);
     }
+    public void GetiEvent(object obj) { (obj as scEventRunner).SetUpEvt(this); }
 }
