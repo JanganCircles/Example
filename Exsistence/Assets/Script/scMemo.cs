@@ -9,7 +9,7 @@ public class scMemo : MonoBehaviour {
    // private string textValue;
     public bool memoState = false;
     private MeshRenderer memoNote;
-    public  string memoname;
+    public Text memoname;
     // Use this for initialization
     void Start()
     {
@@ -46,6 +46,6 @@ public class scMemo : MonoBehaviour {
 
     private static void LoadMemo()
     {
-        scMemoManage.instance.StringLoad();
+        scMemoManage.instance.StringLoad(memoname);
     }
 }
