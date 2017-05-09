@@ -5,19 +5,19 @@ using System.IO;
 
 
 public class scMemo : MonoBehaviour {
-    private string file;
-    private string textValue;
+    //private string file;
+   // private string textValue;
     public bool memoState = false;
     private MeshRenderer memoNote;
-    public string memoname;
+    public Text memoname;
     // Use this for initialization
     void Start()
     {
         memoNote = gameObject.GetComponentInChildren<MeshRenderer>();
         //file = @"C:\Users\admin\Documents\GitHub\Exsistence";
-        TextAsset textfile = Resources.Load(memoname) as TextAsset;
-        textValue = " " + textfile;
-        Debug.Log(textValue);
+        //TextAsset textfile = Resources.Load(memoname) as TextAsset;
+        //textValue = " " + textfile;
+        //Debug.Log(textValue);
     }
 	
 	// Update is called once per frame
@@ -35,9 +35,17 @@ public class scMemo : MonoBehaviour {
     {
         if(col.gameObject.tag == "Player")
         {
+            LoadMemo();
             memoState = true;
-            scMemoManage.instance.StringLoad();
+
+
+
+
         }
     }
 
+    private static void LoadMemo()
+    {
+        scMemoManage.instance.StringLoad(memoname);
+    }
 }
