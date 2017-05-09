@@ -17,6 +17,7 @@ public class scSceneMove : MonoBehaviour
             case "main":
             case "title":
                 scPlayer.play = true;
+                Cursor.visible = true;
                 SceneManager.LoadScene(buttonName);
                 break;
 
@@ -37,7 +38,6 @@ public class scSceneMove : MonoBehaviour
             //가져온 SettingCanvas를 활성화
             case "setting":
                 scOptionOnOffer.PCanvas[0].SetActive(true);
-                //scPlayer.play = false;
                 break;
 
             //버튼의 이름이 Back이면 자신의 부모 객체 비활성화
@@ -46,6 +46,7 @@ public class scSceneMove : MonoBehaviour
                 if(this.gameObject.name == "BackToGame")
                 {
                     scPlayer.play = true;
+                    Cursor.visible = false;
                 }
                 break;
 
