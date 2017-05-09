@@ -8,8 +8,6 @@ public class scSetting : MonoBehaviour
     static float ambientValue = 1f;
     static float audioVolume = 1f;
 
-    static bool resol = false;
-
     public void Awake()
     { 
         Setting();
@@ -29,10 +27,6 @@ public class scSetting : MonoBehaviour
         GUI.Box(new Rect(Screen.width / 2 -3, Screen.height / 2 -120, 105, 35), "오디오 볼륨");
         audioVolume = GUI.HorizontalSlider(new Rect(Screen.width / 2, Screen.height / 2 -100, 100, 50), audioVolume, 0f, 1.0f);
 
-        GUI.Box(new Rect(Screen.width / 2 -3, Screen.height / 2 +80, 125, 40), "해상도");
-        resol = GUI.Toggle(new Rect(Screen.width / 2, Screen.height / 2 +100, 105, 35), resol, "16 : 9");
-        resol = GUI.Toggle(new Rect(Screen.width / 2 +60, Screen.height / 2 + 100, 105, 35), !resol, "4 : 3");
-
         Setting();
     }
 
@@ -47,22 +41,7 @@ public class scSetting : MonoBehaviour
             foreach (AudioSource audioComponent in GameObject.FindObjectsOfType(typeof(AudioSource)))
             {
                 audioComponent.volume = audioVolume;
-
-                audioComponent.Stop();
-                audioComponent.Play();
             }
-        }
-
-        //해상도 설정
-        if(resol)
-        {
-            // Screen.SetResolution(Screen.width / 16, Screen.height / 9, true);
-            Camera.main.aspect = 1600/900;
-        }
-        else if(!resol)
-        {
-            //Screen.SetResolution(Screen.width / 4, Screen.height / 3, true);
-            Camera.main.aspect = 1024/768;
         }
     }
 }
