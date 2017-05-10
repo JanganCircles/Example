@@ -19,10 +19,15 @@ public class scEventRunner : MonoBehaviour {
     public GameObject[] Evts = null;
     public int evtidx;  //이벤트 인덱스 변수
     public bool MainEvent = true;  //메인 이벤트, 서브 이벤트 구분 변수
+
     public EventStasis eStasis;         //이벤트 상태
     
     public float TImer = 0;                 //타이머러너일때만 사용
-    void Awake () {
+    private bool isRunning;
+
+    void Awake ()
+    { 
+        isRunning = false;
         evts = new List<iEvent>();
         for (int i = 0; i < Evts.Length; i++)
         {
@@ -96,10 +101,12 @@ public class scEventRunner : MonoBehaviour {
     }
     public void RunAllEvent()
     {
+        if (isRunning) return;
         for (int i = 0; i < evts.Count; i++)
         {
             evts[i].Run();
         }
+        isRunning = true;
     }
 }
 
@@ -107,4 +114,8 @@ public interface iEvent
 {
     void Run();
     void GetiEvent(object M);
+    /*
+     * 아래 코드 복사해서 iEvent에다가 붙여 넣으세요
+     * public void GetiEvent(object obj) { (obj as scEventRunner).SetUpEvt(this); }
+     */
 }
