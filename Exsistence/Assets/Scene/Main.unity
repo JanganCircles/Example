@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44988477, g: 0.4999454, b: 0.57556796, a: 1}
+  m_IndirectSpecularColor: {r: 0.44988495, g: 0.49994588, b: 0.5755687, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -412,9 +412,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33abd7a54b3c20649945f418c8971df1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Evts: []
   evtidx: 0
   MainEvent: 1
-  ePrefab: {fileID: 0}
   eStasis: 0
   TImer: 0
 --- !u!1 &514697110
@@ -915,9 +915,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33abd7a54b3c20649945f418c8971df1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Evts: []
   evtidx: 0
   MainEvent: 1
-  ePrefab: {fileID: 0}
   eStasis: 0
   TImer: 0
 --- !u!23 &805855557
@@ -1755,7 +1755,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   memoState: 0
-  memoname: 
+  memoname: {fileID: 0}
 --- !u!4 &1352254727
 Transform:
   m_ObjectHideFlags: 0

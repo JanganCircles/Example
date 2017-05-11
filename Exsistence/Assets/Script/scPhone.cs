@@ -34,7 +34,7 @@ public class scPhone : MonoBehaviour, IPointerEnterHandler,IPointerExitHandler
     // Use this for initialization
     void Start () {
         Cursor.visible = false;
-
+        
         phone = transform.Find("Phone").gameObject;
 
         msgList = transform.GetChild(0).Find("MsgList").gameObject;
