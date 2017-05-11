@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class scLook : MonoBehaviour {
     public Transform target;
+    private Vector3 targetPosition;
+
+    
 	// Use this for initialization
 	void Start () {
 		
@@ -11,6 +14,10 @@ public class scLook : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        target.LookAt(target);
-	}
+        targetPosition = new Vector3(target.position.x, this.transform.position.y, target.position.z);
+
+        this.transform.LookAt(targetPosition);
+
+
+    }
 }
