@@ -41,8 +41,6 @@ public class scMsg : MonoBehaviour {
     public static void ReMessage()
     {
         for (int i = 0; i < msgList.Count; i++) {
-            //Debug.Log("쉬벌"+msgList[i].transform.GetChild(0).GetComponent<Transform>()
-                //.GetComponent<RectTransform>().localPosition);
                msgList[i].transform.GetChild(0).GetComponent<Transform>()
                 .GetComponent<RectTransform>().localPosition = (new Vector3(193, 70-(i*40), 0));
         }
