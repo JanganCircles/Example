@@ -14,11 +14,11 @@ public class scPhone : MonoBehaviour, IPointerEnterHandler,IPointerExitHandler
     private int imemo1_1 = 0;
 
     GameObject phone;
-    GameObject msgList;
+    GameObject msgListV;
     GameObject back;
     GameObject inMemo;
     GameObject memo1_1;
-    
+
     public void OnPointerEnter(PointerEventData data)
     {
         Debug.Log("MouseOver");
@@ -34,10 +34,10 @@ public class scPhone : MonoBehaviour, IPointerEnterHandler,IPointerExitHandler
     // Use this for initialization
     void Start () {
         Cursor.visible = false;
-        
+
         phone = transform.Find("Phone").gameObject;
 
-        msgList = transform.GetChild(0).Find("MsgList").gameObject;
+        msgListV = transform.GetChild(0).Find("MsgList").gameObject;
         back = transform.GetChild(0).Find("Back").gameObject;
 
         inMemo = transform.GetChild(0).Find("InMemo").gameObject;
@@ -46,7 +46,7 @@ public class scPhone : MonoBehaviour, IPointerEnterHandler,IPointerExitHandler
         phone.SetActive(false);
         memo1_1.SetActive(false);
         inMemo.SetActive(false);
-        msgList.SetActive(false);
+        msgListV.SetActive(false);
         back.SetActive(false);
     }
 
@@ -68,8 +68,8 @@ public class scPhone : MonoBehaviour, IPointerEnterHandler,IPointerExitHandler
         }
     }
     public void VisibleMsg() {
-        Debug.Log("뭐");
-        msgList.SetActive(true);
+        scMsg.MessageVis();
+        msgListV.SetActive(true);
         imsgList = 1;
         back.SetActive(true);
     }
@@ -87,7 +87,8 @@ public class scPhone : MonoBehaviour, IPointerEnterHandler,IPointerExitHandler
     }
     public void Back() {
         if (imsgList == 1) {
-            msgList.SetActive(false);
+            scMsg.MessageUnvis();
+            msgListV.SetActive(false);
             imsgList = 0;
         }
         if (iinMeno == 1)
