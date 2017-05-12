@@ -16,6 +16,7 @@ public class scMsg : MonoBehaviour {
             CreateNewMessage("안녕");
             CreateNewMessage("지현아");
             CreateNewMessage("지현우주");
+            MessageUnvis();
         }
     }
 	
@@ -27,7 +28,7 @@ public class scMsg : MonoBehaviour {
         msgList.Add(Instantiate(msgCanvas));
         msgList[msgList.Count-1].transform.GetChild(0).GetChild(0)
             .GetComponent<Transform>().GetComponent<Text>().text = str;
-       // ReMessage();
+        ReMessage();
     }
     public static void DeleteMessage(int index) {
         msgList.RemoveAt(index);
@@ -40,14 +41,17 @@ public class scMsg : MonoBehaviour {
     public static void ReMessage()
     {
         for (int i = 0; i < msgList.Count; i++) {
-            msgList[i].GetComponent<Transform>()
-                .GetComponent<RectTransform>().Translate(new Vector3(193, 70-(i*40), 0));
+            //Debug.Log("쉬벌"+msgList[i].transform.GetChild(0).GetComponent<Transform>()
+                //.GetComponent<RectTransform>().localPosition);
+               msgList[i].transform.GetChild(0).GetComponent<Transform>()
+                .GetComponent<RectTransform>().localPosition = (new Vector3(193, 70-(i*40), 0));
         }
     }
     public static void MessageVis()
     {
         for (int i = 0; i < msgList.Count; i++)
         {
+            msgCanvas.SetActive(true);
             msgList[i].SetActive(true);
         }
     }
@@ -55,6 +59,7 @@ public class scMsg : MonoBehaviour {
     {
         for (int i = 0; i < msgList.Count; i++)
         {
+            msgCanvas.SetActive(false);
             msgList[i].SetActive(false);
         }
     }
