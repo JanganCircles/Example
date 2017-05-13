@@ -8,10 +8,10 @@ public class scObject : MonoBehaviour
     private Text hudText;                // 텍스트
     private float objside;                  // 거리 계산
                                             // public bool interaction = false;        // 상호작용 on/off
-    public Transform interactionTr;        // 상호작용 받는 것의 위치 값 받아오는 변수
+   // public Transform interactionTr;        // 상호작용 받는 것의 위치 값 받아오는 변수
     private Transform playerTr;             // 플레이어의 위치 값을 받아오는 변수
     public MeshRenderer interactionMesh;   // 상호작용이 되면 Meshrenderer on
-    public CapsuleCollider playerRd;       // collider radius 값과 거리를 같게 해줄 변수
+    private CapsuleCollider playerRd;       // collider radius 값과 거리를 같게 해줄 변수
    // public scDoor door;
   //  public bool doorOn = false;
      public scInterObject interObject;
@@ -19,7 +19,7 @@ public class scObject : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        interactionTr.GetComponent<Transform>();
+        
         playerTr.GetComponent<Transform>();
         interactionMesh.GetComponent<MeshRenderer>().enabled = true;
 
