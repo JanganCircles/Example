@@ -25,7 +25,7 @@ GameObject:
   - component: {fileID: 54547682776352320}
   - component: {fileID: 114256772342302140}
   m_Layer: 0
-  m_Name: actionObject 1
+  m_Name: actionObject
   m_TagString: Untagged
   m_Icon: {fileID: 419385456094870383, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -337,9 +337,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6f4a586765712442a27b466228df7a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interactionTr: {fileID: 0}
   interactionMesh: {fileID: 23609632139505632}
-  playerRd: {fileID: 0}
   interObject: {fileID: 114593209436018356}
   objectOn: 1
 --- !u!114 &114593209436018356
