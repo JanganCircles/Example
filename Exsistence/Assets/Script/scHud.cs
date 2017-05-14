@@ -58,7 +58,8 @@ public class scHud : MonoBehaviour {
           if (distance + objside <= objside)
           */
     }
-        void OnTriggerEnter(Collider col)
+
+    void OnTriggerEnter(Collider col)
     {
 
         if (col.gameObject.tag == "Player")
