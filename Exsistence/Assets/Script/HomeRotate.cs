@@ -54,7 +54,7 @@ public class HomeRotate : MonoBehaviour
         {
             if (Input.GetMouseButton(0) && dragging)
             {
-
+                    
                 speed = new Vector3(-Input.GetAxis("Mouse X"), Input.GetAxis("Mouse Y"), 0);
 
                 avgSpeed = Vector3.Lerp(avgSpeed, speed, Time.deltaTime * 1);
@@ -94,7 +94,7 @@ public class HomeRotate : MonoBehaviour
 
         if (col.gameObject.tag == "Player")
         {
-            Debug.Log("?");
+           
             interactionMesh.enabled = true;
             //door = col.GetComponent<scDoor>();
         }
@@ -105,7 +105,7 @@ public class HomeRotate : MonoBehaviour
     }
     void OnTriggerExit(Collider col)
     {
-        Debug.Log("2");
+        
         interactionMesh.enabled = false;
 
     }
