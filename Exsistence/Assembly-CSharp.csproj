@@ -54,6 +54,9 @@
      <Compile Include="Assets\Script\Event\scEventRunnerTime.cs" />
      <Compile Include="Assets\Script\Event\scEventSecond.cs" />
      <Compile Include="Assets\Script\Event\scEvt5th.cs" />
+     <Compile Include="Assets\Script\Event\scEvt6th.cs" />
+     <Compile Include="Assets\Script\Event\scEvt7th.cs" />
+     <Compile Include="Assets\Script\Event\scEvt8th.cs" />
      <Compile Include="Assets\Script\Event\scSound.cs" />
      <Compile Include="Assets\Script\HomeRotate.cs" />
      <Compile Include="Assets\Script\TestLab.cs" />
@@ -74,6 +77,7 @@
      <Compile Include="Assets\Script\scPlayer.cs" />
      <Compile Include="Assets\Script\scSaveandLoad.cs" />
      <Compile Include="Assets\Script\scSceneMove.cs" />
+     <Compile Include="Assets\Script\scSetBool.cs" />
      <Compile Include="Assets\Script\scSetting.cs" />
      <Compile Include="Assets\eventexample.cs" />
      <Compile Include="Assets\scEventMain1.cs" />
