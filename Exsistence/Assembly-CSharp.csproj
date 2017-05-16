@@ -55,6 +55,7 @@
      <Compile Include="Assets\Script\Event\scEventSecond.cs" />
      <Compile Include="Assets\Script\Event\scEvt5th.cs" />
      <Compile Include="Assets\Script\Event\scSound.cs" />
+     <Compile Include="Assets\Script\HomeRotate.cs" />
      <Compile Include="Assets\Script\TestLab.cs" />
      <Compile Include="Assets\Script\scCamera.cs" />
      <Compile Include="Assets\Script\scCanvas.cs" />
