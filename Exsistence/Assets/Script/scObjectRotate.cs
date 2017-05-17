@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-public class HomeRotate : MonoBehaviour
+public class scObjectRotate : MonoBehaviour
 {
     private float objside;
     private Transform playerTr;             // 플레이어의 위치 값을 받아오는 변수
@@ -14,7 +14,7 @@ public class HomeRotate : MonoBehaviour
 
     public float lerpSpeed = 1.0f;
 
-    private bool jh=false;
+    private bool jh = false;
 
     private Vector3 speed = new Vector3();
 
@@ -28,7 +28,7 @@ public class HomeRotate : MonoBehaviour
         interactionMesh.GetComponent<MeshRenderer>().enabled = true;
 
         playerRd.GetComponent<CapsuleCollider>();
-        
+
         objside = playerRd.radius;
     }
 
@@ -52,18 +52,21 @@ public class HomeRotate : MonoBehaviour
 
         if (jh)
         {
+
             if (Input.GetMouseButton(0) && dragging)
             {
-                    
+
                 speed = new Vector3(-Input.GetAxis("Mouse X"), Input.GetAxis("Mouse Y"), 0);
 
                 avgSpeed = Vector3.Lerp(avgSpeed, speed, Time.deltaTime * 1);
 
+                rotationSpeed = 5;
+               
             }
 
             else
-            {
-
+        {
+                rotationSpeed = 0;
                 if (dragging)
                 {
 
@@ -83,12 +86,14 @@ public class HomeRotate : MonoBehaviour
 
             }
 
+
         }
         transform.Rotate(Camera.main.transform.up * speed.x * rotationSpeed, Space.World);
 
         transform.Rotate(Camera.main.transform.right * speed.y * rotationSpeed, Space.World);
 
     }
+
     void OnTriggerEnter(Collider col)
     {
 

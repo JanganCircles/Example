@@ -2095,6 +2095,11 @@ Prefab:
       propertyPath: target
       value: 
       objectReference: {fileID: 1596947242}
+    - target: {fileID: 23948628057673872, guid: d63f642d606a8eb488a80f6b429f1dd0,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d63f642d606a8eb488a80f6b429f1dd0, type: 2}
   m_IsPrefabParent: 0
@@ -2145,6 +2150,11 @@ Prefab:
     - target: {fileID: 1618691776777576, guid: 67338e05d2dfd3a4fb929111d6919fce, type: 2}
       propertyPath: m_Name
       value: Interaction_Object
+      objectReference: {fileID: 0}
+    - target: {fileID: 114520023465067040, guid: 67338e05d2dfd3a4fb929111d6919fce,
+        type: 2}
+      propertyPath: rotationSpeed
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 67338e05d2dfd3a4fb929111d6919fce, type: 2}
