@@ -62,7 +62,6 @@
      <Compile Include="Assets\Script\EventStream\scEventMain2.cs" />
      <Compile Include="Assets\Script\EventStream\scEventMain3.cs" />
      <Compile Include="Assets\Script\EventStream\scEventMain4.cs" />
-     <Compile Include="Assets\Script\HomeRotate.cs" />
      <Compile Include="Assets\Script\TestLab.cs" />
      <Compile Include="Assets\Script\scCamera.cs" />
      <Compile Include="Assets\Script\scCanvas.cs" />
@@ -76,6 +75,7 @@
      <Compile Include="Assets\Script\scMemoManage.cs" />
      <Compile Include="Assets\Script\scMsg.cs" />
      <Compile Include="Assets\Script\scObject.cs" />
+     <Compile Include="Assets\Script\scObjectRotate.cs" />
      <Compile Include="Assets\Script\scOptionOnOffer.cs" />
      <Compile Include="Assets\Script\scPhone.cs" />
      <Compile Include="Assets\Script\scPlayer.cs" />

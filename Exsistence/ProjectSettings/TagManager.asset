@@ -6,6 +6,7 @@ TagManager:
   tags:
   - phone
   - msgCanvas
+  - Firedoor
   layers:
   - Default
   - TransparentFX
