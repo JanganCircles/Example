@@ -1,45 +1,53 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 // 박세찬
 public class scSound : MonoBehaviour, iEvent
 {
 
-    public scEventRunner Runner;
     public AudioSource audioPlayer; // 음악 플레이어 
-    public AudioClip SoundClip; // 실제 음악 파일 
-                                //public string soundName = null; //?
+    public AudioClip []SoundClip; // 실제 음악 파일 
 
+    public int SoundClip_i=0;
 
 
     [Range(0f, 1f)]
     public float soundVolume = 1f; // 음악 불륨 
 
-
-
     public bool loopSet; //몇 번 루프할건지(혹은 무한), 얼마나 지속되는지
     public bool rangeSeting; // 이거 체크하면 게임안에서 크기 변경 가능함 
+    public bool Allplay = false; // 모두 한번에 재생할것인지? 
+
 
     [Range(0f, 15f)]
-    public float soundMinDistance;
+    public float soundMinDistance = 8f;
     [Range(15f, 30f)]
-    public float soundMaxDistance;
+    public float soundMaxDistance = 25f;
 
-
+    public void GetiEvent(object obj) { (obj as scEventRunner).SetUpEvt(this); }
     // Use this for initialization
     void Awake()
     {
-        Runner.SetEvent(this);
-
-        audioPlayer = gameObject.AddComponent<AudioSource>();
-        audioPlayer.clip = SoundClip;
-
+        
+        audioPlayer =gameObject.GetComponent<AudioSource>();
+        //SoundClip = gameObject.GetComponent<AudioClip>(); // 겟컴포넌트가 모든걸 가져오는건 아님 
+        // 오브젝트형은 겟컴포넌트로 못함 그래서 null되었던거임 
         soundSet();
-
-
+        for (int i = 0; i < SoundClip.Length; i++)
+        {
+            audioPlayer.clip = SoundClip[i];
+        }
+        
 
     }
+     
 
+    void Start()
+    {
+        //audioPlayer.PlayOneShot(SoundClip);
+        //StartCoroutine(play());
+    }
     // Update is called once per frame
     void Update()
     {
@@ -60,15 +68,36 @@ public class scSound : MonoBehaviour, iEvent
 
     public void Run()
     {
-        audioPlayer.PlayOneShot(SoundClip);
+        
+        
+        
+        if (Allplay)
+        {
+            Allplay = false; // false로 초기화 
+            StartCoroutine(play());
+        }
+        else
+        {
+            StartCoroutine(play(SoundClip_i));
+        }
         
     }
 
-    IEnumerator play() // ?$
-    {
-        audioPlayer.PlayOneShot(SoundClip);
-        yield return new WaitForSeconds(0.3f);
-    }
-    public void GetiEvent(object obj) { (obj as scEventRunner).SetUpEvt(this); }
+   
 
+    IEnumerator play() // 한번에 배열에 있는 음악 모두 재생
+    {
+        for (int i = 0; i < SoundClip.Length; i++)
+        {
+            audioPlayer.PlayOneShot(SoundClip[i]);
+        }
+            yield return null;
+
+    }
+    IEnumerator play(int SoundClip_i) // 몇 번째에 있는 음악만 재생   
+    {
+        this.SoundClip_i = SoundClip_i;
+        audioPlayer.PlayOneShot(SoundClip[SoundClip_i]);
+        yield return null;
+    }
 }
