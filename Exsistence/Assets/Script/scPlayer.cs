@@ -26,7 +26,7 @@ public class scPlayer : MonoBehaviour {
     // Use this for initialization
 
     void Start () {
-
+        DontDestroyOnLoad(this);
         play = true;
 
         tr = GetComponent<Transform>();
@@ -49,7 +49,7 @@ public class scPlayer : MonoBehaviour {
         {
             moveDirection = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
             moveDirection = transform.TransformDirection(moveDirection);
-            //Quaternion.LookRotation(moveDirection);
+            Quaternion.LookRotation(moveDirection);
             moveDirection *= moveSpeed;
             controller.Move(moveDirection * Time.deltaTime);
             if (scPhone.play) tr.Rotate(Vector3.up * Time.deltaTime * rotSpeed * Input.GetAxis("Mouse X"));

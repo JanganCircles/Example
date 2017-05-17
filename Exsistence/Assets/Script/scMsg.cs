@@ -18,6 +18,7 @@ public class scMsg : MonoBehaviour {
             CreateNewMessage("지현우주");
             MessageUnvis();
         }
+        scMsg.CreateNewMessage("aaaa");
     }
 	
 	// Update is called once per frame
