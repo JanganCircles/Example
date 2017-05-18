@@ -26,7 +26,6 @@ public class scPlayer : MonoBehaviour {
     // Use this for initialization
 
     void Start () {
-        DontDestroyOnLoad(this);
         play = true;
 
         tr = GetComponent<Transform>();

@@ -14,3 +14,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scene/SaveTestScene.unity
     guid: 25830fb7527fe744c8d3f91a12603322
+  - enabled: 1
+    path: Assets/Scene/EvtShinHyeon.unity
+    guid: 88736881f3b6492408f7260adc8b05ce
+  - enabled: 1
+    path: Assets/Scene/EvtShinHyeon_no11.unity
+    guid: 5517153d126e5f34aa2916b4312c9a00

@@ -19305,6 +19305,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1311790236}
   - component: {fileID: 1311790235}
+  - component: {fileID: 1311790237}
   m_Layer: 0
   m_Name: 4cmd
   m_TagString: Untagged
@@ -19765,6 +19766,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1311790237
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1311790234}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77b80682f1c4e18489d7bec61609bae8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Player: {fileID: 1782065665}
+  Posi: {fileID: 0}
 --- !u!1001 &1316743269
 Prefab:
   m_ObjectHideFlags: 0
@@ -26730,6 +26744,11 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a2ca2517a319b8f48b2bea1bf6ff1503, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1782065665 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1678897252854278, guid: a2ca2517a319b8f48b2bea1bf6ff1503,
+    type: 2}
+  m_PrefabInternal: {fileID: 1782065664}
 --- !u!1 &1782249904
 GameObject:
   m_ObjectHideFlags: 0
