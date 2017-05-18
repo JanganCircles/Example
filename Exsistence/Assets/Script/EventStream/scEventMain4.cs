@@ -7,7 +7,7 @@ public class scEventMain4 : MonoBehaviour, iEvent
     public GameObject Mannequin;
     public GameObject pig;
     public GameObject lights;
-    scSound sound;
+    public scSound sound;
     // Use this for initialization
     void Start()
     {
@@ -23,17 +23,13 @@ public class scEventMain4 : MonoBehaviour, iEvent
     {
         StartCoroutine(EventStream());
     }
-    /*public void CreateMannequin() // 마네킹 생성 
-    {
-        for (int i = 0; i < pos.Length; i++)
-            Instantiate(Mannequin[i], pos[i].transform);
-    }*/
+
 
     IEnumerator EventStream()
     {
-        Debug.Log("마네킹 킴");
+        Debug.Log("마네킹 킴 , 조명 킴 ");
         Mannequin.SetActive(true);
-
+        lights.SetActive(true);
 
         Debug.Log("조명설정 해야함");
 
@@ -46,10 +42,15 @@ public class scEventMain4 : MonoBehaviour, iEvent
         
 
         yield return new WaitForSeconds(2f);
-        Mannequin.SetActive(false);
+        sound.audioPlayer.Stop();
+
+
+        
 
 
         yield return new WaitForSeconds(3f);
+        Mannequin.SetActive(false);
+
         Debug.Log("조명 꺼짐");
         lights.SetActive(false);
 
