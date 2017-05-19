@@ -56,9 +56,13 @@ public class scPhone : MonoBehaviour, IPointerEnterHandler,IPointerExitHandler
         {
             if (Input.GetKeyDown(KeyCode.Tab)) {
                 if (iphone == 0)
-                { phone.SetActive(true); iphone = 1; }
+                { phone.SetActive(true); iphone = 1;
+                  if(imsgList == 1) scMsg.MessageVis();
+                }
                 else
-                { phone.SetActive(false); iphone = 0; }
+                { phone.SetActive(false); iphone = 0;
+                  scMsg.MessageUnvis();
+                }
             }
             else if(Input.GetKeyDown(KeyCode.Escape))
             {
