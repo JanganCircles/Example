@@ -53,11 +53,13 @@
      <Compile Include="Assets\Script\Event\scEventRunnerLogic.cs" />
      <Compile Include="Assets\Script\Event\scEventRunnerTime.cs" />
      <Compile Include="Assets\Script\Event\scEventSecond.cs" />
+     <Compile Include="Assets\Script\Event\scEvt10th.cs" />
      <Compile Include="Assets\Script\Event\scEvt5th.cs" />
      <Compile Include="Assets\Script\Event\scEvt67th.cs" />
      <Compile Include="Assets\Script\Event\scEvt6th.cs" />
      <Compile Include="Assets\Script\Event\scEvt7th.cs" />
      <Compile Include="Assets\Script\Event\scEvt8th.cs" />
+     <Compile Include="Assets\Script\Event\scEvt9th.cs" />
      <Compile Include="Assets\Script\Event\scSound.cs" />
      <Compile Include="Assets\Script\EventStream\scEventMain1.cs" />
      <Compile Include="Assets\Script\EventStream\scEventMain2.cs" />

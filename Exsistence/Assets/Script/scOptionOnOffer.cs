@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class scOptionOnOffer : MonoBehaviour
 {
-    //Canvas[0] : SettingCanvas, Canvas[1] : LoadCanvase, Canvas[2] : SaveCanvas ,Canvas[3] : PauseCanvas
+    //Canvas[0] : SettingCanvas, Canvas[1] : LoadCanvase, Canvas[2] : SaveCanvas ,Canvas[3] : PauseCanvas, canvas
     public GameObject[] Canvas;
 
     //PCanvase[0] : Settingcanvas, PCanvase[1] : LoadCanvas, PCanvas[2] : SaveCanvas

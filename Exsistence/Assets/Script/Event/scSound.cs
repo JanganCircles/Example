@@ -68,9 +68,6 @@ public class scSound : MonoBehaviour, iEvent
 
     public void Run()
     {
-        
-        
-        
         if (Allplay)
         {
             Allplay = false; // false로 초기화 

@@ -47,17 +47,22 @@ public class scEventRunner : MonoBehaviour {
     }
     public void isRunEvent()
     {
-        if (eStasis != EventStasis.LOGICCAL)
+        
+        if (eStasis != EventStasis.LOGICCAL || evtidx != scGameManager.instance.eventIndex)
         {
             return;
         }
         RunAllEvent();
+
+        if (MainEvent) //혁수 수정 : Logiccal때 GameManager의 EvtIndex 증가 하지 않아 추가함.
+        { scGameManager.instance.eventIndex++; }
 
     }
     public void isTimerRun()
     {
         if (eStasis != EventStasis.TIME)
         {
+            
             return;
         }
         StartCoroutine("TimerRun");
@@ -68,6 +73,7 @@ public class scEventRunner : MonoBehaviour {
         float MaxTIme = TImer;
         while (MaxTIme > 0)
         {
+            Debug.Log(MaxTIme);
             MaxTIme -= Time.deltaTime;
             yield return null;
         }
@@ -81,9 +87,9 @@ public class scEventRunner : MonoBehaviour {
         {
             return;
         }
-        if (eStasis != EventStasis.COLLISION)
+       if (eStasis != EventStasis.COLLISION) // 혁수 수정 : Logiccal때 Collider가 꺼져서 수정함.
         {
-            gameObject.GetComponent<SphereCollider>().enabled = false;
+            //gameObject.GetComponent<SphereCollider>().enabled = false;
             return;
         }
         Debug.Log("충돌하였음");
