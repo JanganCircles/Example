@@ -20,7 +20,6 @@ public class scEvt11th : MonoBehaviour, iEvent
 
     void Update()
     {
-        Debug.Log(eventCount);
         if(eventCount < 2)
         {
             Runner.isRunning = false;
