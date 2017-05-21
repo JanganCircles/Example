@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311918, g: 0.3807398, b: 0.35872716, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -7515,6 +7515,7 @@ MonoBehaviour:
   MainEvent: 1
   eStasis: 0
   TImer: 0
+  isRunning: 0
 --- !u!54 &453586401
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -15998,6 +15999,34 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 978517552}
   m_Mesh: {fileID: 4300028, guid: aa4f7e7a46c5a484d88a53b921a2c500, type: 3}
+--- !u!1 &981819275
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 981819276}
+  m_Layer: 0
+  m_Name: temp
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &981819276
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 981819275}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: -0.15, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1103907235}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &983569641
 GameObject:
   m_ObjectHideFlags: 0
@@ -17515,13 +17544,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1047526690}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 19.450012, y: -4.02, z: 14.17}
+  m_LocalRotation: {x: -0, y: 0.2618994, z: -0, w: 0.9650952}
+  m_LocalPosition: {x: 16.93, y: -4.02, z: 12.18}
   m_LocalScale: {x: 7.559759, y: 11.941513, z: 4.453793}
   m_Children: []
   m_Father: {fileID: 1741372255}
   m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 30.366001, z: 0}
 --- !u!54 &1047526692
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -17550,10 +17579,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Evts:
   - {fileID: 1741372253}
-  evtidx: 4
+  evtidx: 1
   MainEvent: 1
   eStasis: 0
   TImer: 0
+  isRunning: 0
 --- !u!23 &1047526694
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -27823,7 +27853,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!23 &1662026074
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -28530,7 +28560,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1698953588
 Transform:
   m_ObjectHideFlags: 0
@@ -29177,6 +29207,8 @@ MonoBehaviour:
   pig: {fileID: 1662026073}
   lights: {fileID: 1698953587}
   sound: {fileID: 430479008}
+  Posi: {fileID: 981819275}
+  Player: {fileID: 1103907229}
 --- !u!4 &1741372255
 Transform:
   m_ObjectHideFlags: 0

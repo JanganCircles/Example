@@ -6,17 +6,20 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scene/Main.unity
+    path: Assets/Scene/Main111111.unity
     guid: 1b43ef506074dac49aa1156571ed2faf
   - enabled: 1
-    path: Assets/Scene/Title.unity
+    path: Assets/Scene/EventScene/Title.unity
     guid: 2afbf902df73ff94a955e6965f19a997
   - enabled: 1
     path: Assets/Scene/SaveTestScene.unity
     guid: 25830fb7527fe744c8d3f91a12603322
   - enabled: 1
-    path: Assets/Scene/EvtShinHyeon.unity
+    path: Assets/Scene/EventScene/EvtShinHyeon.unity
     guid: 88736881f3b6492408f7260adc8b05ce
   - enabled: 1
-    path: Assets/Scene/EvtShinHyeon_no11.unity
+    path: Assets/Scene/EventScene/EvtShinHyeon_no11.unity
     guid: 5517153d126e5f34aa2916b4312c9a00
+  - enabled: 1
+    path: Assets/Scene/EventScene/main.unity
+    guid: 00000000000000000000000000000000
