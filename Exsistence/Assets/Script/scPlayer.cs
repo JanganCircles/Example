@@ -7,7 +7,8 @@ public class scPlayer : MonoBehaviour {
 
 	private float h = 0.0f;
 	private float v = 0.0f;
-	public float moveSpeed = 10.0f;
+    public float gravity = 30.0f;
+    public float moveSpeed = 10.0f;
 	public float rotSpeed = 100.0f;
 
     private Vector3 moveDirection = Vector3.zero;
@@ -50,9 +51,11 @@ public class scPlayer : MonoBehaviour {
             moveDirection = transform.TransformDirection(moveDirection);
             Quaternion.LookRotation(moveDirection);
             moveDirection *= moveSpeed;
+            moveDirection.y -= gravity * Time.deltaTime;
             controller.Move(moveDirection * Time.deltaTime);
             if (scPhone.play) tr.Rotate(Vector3.up * Time.deltaTime * rotSpeed * Input.GetAxis("Mouse X"));
             
         }
+        
     }
 }
