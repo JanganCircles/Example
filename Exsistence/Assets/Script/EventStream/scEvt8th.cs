@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class scEvt7th : MonoBehaviour, iEvent
+public class scEvt8th : MonoBehaviour, iEvent
 {
     public GameObject back8;
     public GameObject pencil;

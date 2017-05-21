@@ -3900,6 +3900,7 @@ MonoBehaviour:
   MainEvent: 1
   eStasis: 0
   TImer: 0
+  isRunning: 0
 --- !u!23 &263778717
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4071,6 +4072,7 @@ MonoBehaviour:
   MainEvent: 1
   eStasis: 0
   TImer: 0
+  isRunning: 0
 --- !u!23 &293301378
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -12499,6 +12501,7 @@ MonoBehaviour:
   MainEvent: 1
   eStasis: 0
   TImer: 0
+  isRunning: 0
 --- !u!23 &864455255
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -32019,7 +32022,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1714920345843240, guid: 8a4f401f6d296b341b1e8148589b6ef8, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8a4f401f6d296b341b1e8148589b6ef8, type: 2}

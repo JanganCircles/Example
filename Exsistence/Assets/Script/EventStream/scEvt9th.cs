@@ -2,20 +2,19 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class scEvt8th : MonoBehaviour, iEvent
+public class scEvt9th : MonoBehaviour, iEvent
 {
     public GameObject Locker;
+    public GameObject ShockBox;
+    public GameObject Bag;
 
     public void GetiEvent(object obj) { (obj as scEventRunner).SetUpEvt(this); }
 
     public void Run()
     {
-       // if (Input.GetKey(KeyCode.E))
-        //{
-            Debug.Log("EEEEEEEEEEEEEEEEEE");
-            Locker.GetComponent<scSetBool>().isLock = false;
-            Debug.Log("falseeeeeeeeeeee");
-        //}
+        Locker.GetComponent<scSetBool>().isLock = false;
+        ShockBox.SetActive(true);
+        Bag.SetActive(true);
     }
 
     // Use this for initialization
