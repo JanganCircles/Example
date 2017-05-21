@@ -1126,6 +1126,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buttonName: loadGame
+  overEffect: {fileID: 0}
 --- !u!114 &409547512
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1345,6 +1346,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buttonName: back
+  overEffect: {fileID: 0}
 --- !u!114 &640082442
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1486,6 +1488,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buttonName: back
+  overEffect: {fileID: 0}
 --- !u!114 &650223439
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2191,6 +2194,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buttonName: loadGame
+  overEffect: {fileID: 0}
 --- !u!114 &691184136
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2218,9 +2222,9 @@ MonoBehaviour:
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
-    m_HighlightedSprite: {fileID: 21300000, guid: 7e9aee5fc64fb9043a751c4e21e28a1e,
+    m_HighlightedSprite: {fileID: 21300000, guid: 3a2a9bc64af005842bac9b418cd6274c,
       type: 3}
-    m_PressedSprite: {fileID: 21300000, guid: cb74c6805453b074f98fcd4bdf77c451, type: 3}
+    m_PressedSprite: {fileID: 21300000, guid: 25ed49a58d6419049a5326f46df40758, type: 3}
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
@@ -2265,7 +2269,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: cb74c6805453b074f98fcd4bdf77c451, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 25ed49a58d6419049a5326f46df40758, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2525,6 +2529,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buttonName: saveGame
+  overEffect: {fileID: 0}
 --- !u!114 &864622304
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2665,6 +2670,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buttonName: main
+  overEffect: {fileID: 0}
 --- !u!114 &872808733
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2692,9 +2698,9 @@ MonoBehaviour:
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
-    m_HighlightedSprite: {fileID: 21300000, guid: 9524acac36e094946a0630b921aa6261,
+    m_HighlightedSprite: {fileID: 21300000, guid: 18b4c45a5cc57304788d5f692e67ff49,
       type: 3}
-    m_PressedSprite: {fileID: 21300000, guid: 8978d347c7c21a642a5831c0855b25ad, type: 3}
+    m_PressedSprite: {fileID: 21300000, guid: 0bb93a2af8ef6694da30e9252b9ce305, type: 3}
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
@@ -2739,7 +2745,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 8978d347c7c21a642a5831c0855b25ad, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0bb93a2af8ef6694da30e9252b9ce305, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3284,6 +3290,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buttonName: leaveGame
+  overEffect: {fileID: 0}
 --- !u!114 &1050217043
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3311,9 +3318,9 @@ MonoBehaviour:
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
-    m_HighlightedSprite: {fileID: 21300000, guid: c218716c53f1ab04f82b4a0b3d1fd704,
+    m_HighlightedSprite: {fileID: 21300000, guid: 0ec9b49993a6889408dee9180be2ea38,
       type: 3}
-    m_PressedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 21300000, guid: 7a09549ac96ed9d4a9a2bd7527cad45e, type: 3}
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
@@ -3358,7 +3365,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: cd8dbfa2f166c3e4c819acbdf4a640b7, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 7a09549ac96ed9d4a9a2bd7527cad45e, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3426,6 +3433,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buttonName: back
+  overEffect: {fileID: 0}
 --- !u!114 &1087740330
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3567,6 +3575,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buttonName: title
+  overEffect: {fileID: 0}
 --- !u!114 &1118389121
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3875,6 +3884,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buttonName: setting
+  overEffect: {fileID: 0}
 --- !u!114 &1244749674
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4312,6 +4322,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buttonName: leaveGame
+  overEffect: {fileID: 0}
 --- !u!114 &1462575162
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4614,6 +4625,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buttonName: setting
+  overEffect: {fileID: 0}
 --- !u!114 &1546635772
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4641,9 +4653,9 @@ MonoBehaviour:
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
-    m_HighlightedSprite: {fileID: 21300000, guid: d40d3c4cdb62bc043a66d535999b312b,
+    m_HighlightedSprite: {fileID: 21300000, guid: 5ad5ea59e48cb73429179dd48b116483,
       type: 3}
-    m_PressedSprite: {fileID: 21300000, guid: 52357ddae602cbf44bf5c492c2e55109, type: 3}
+    m_PressedSprite: {fileID: 21300000, guid: 3aef122de5a57f94b93bda10987029b8, type: 3}
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
@@ -4688,7 +4700,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 52357ddae602cbf44bf5c492c2e55109, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 3aef122de5a57f94b93bda10987029b8, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -5203,7 +5215,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 86bcab1d132f93c41b79d2ad8ed19f3f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 42babc965992fdc4fbb0dd27def6ced6, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -5491,6 +5503,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buttonName: back
+  overEffect: {fileID: 0}
 --- !u!114 &2121344787
 MonoBehaviour:
   m_ObjectHideFlags: 0

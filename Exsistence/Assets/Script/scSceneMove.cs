@@ -2,11 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class scSceneMove : MonoBehaviour
 {
     //누른 버튼의 이름을 미리 받아옴
     public string buttonName;
+    public GameObject overEffect;
 
     public void MoveScene()
     {
@@ -55,5 +57,22 @@ public class scSceneMove : MonoBehaviour
                 Debug.Log(buttonName + "은 지정되지 않은 버튼 / Unspecified button.");
                 break;
         }
+    }
+
+    void OnMouseOver()
+    {
+        if(SceneManager.GetActiveScene().name == "Title")
+        {
+            overEffect.SetActive(true);
+        }
+    }
+
+    void OnMouseExit()
+    {
+        if (SceneManager.GetActiveScene().name == "Title")
+        {
+            overEffect.SetActive(false);
+        }
+
     }
 }

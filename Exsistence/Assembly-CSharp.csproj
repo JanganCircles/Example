@@ -39,10 +39,10 @@
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="UnityEngine">
-      <HintPath>D:/Program Files/Unity/Editor/Data/Managed/UnityEngine.dll</HintPath>
+      <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor">
-      <HintPath>D:/Program Files/Unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
+      <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -54,16 +54,18 @@
      <Compile Include="Assets\Script\Event\scEventRunnerTime.cs" />
      <Compile Include="Assets\Script\Event\scEventSecond.cs" />
      <Compile Include="Assets\Script\Event\scEvt10th.cs" />
+     <Compile Include="Assets\Script\Event\scEvt11th.cs" />
+     <Compile Include="Assets\Script\Event\scEvt12th.cs" />
      <Compile Include="Assets\Script\Event\scEvt5th.cs" />
      <Compile Include="Assets\Script\Event\scEvt67th.cs" />
      <Compile Include="Assets\Script\Event\scEvt6th.cs" />
      <Compile Include="Assets\Script\Event\scEvt7th.cs" />
      <Compile Include="Assets\Script\Event\scEvt8th.cs" />
-     <Compile Include="Assets\Script\Event\scEvt9th.cs" />
      <Compile Include="Assets\Script\Event\scSound.cs" />
      <Compile Include="Assets\Script\EventStream\scEventMain1.cs" />
      <Compile Include="Assets\Script\EventStream\scEventMain2.cs" />
      <Compile Include="Assets\Script\EventStream\scEventMain3.cs" />
+     <Compile Include="Assets\Script\EventStream\scEventMain3_sub.cs" />
      <Compile Include="Assets\Script\EventStream\scEventMain4.cs" />
      <Compile Include="Assets\Script\TestLab.cs" />
      <Compile Include="Assets\Script\sc4cmdPosi.cs" />
@@ -77,6 +79,7 @@
      <Compile Include="Assets\Script\scLook.cs" />
      <Compile Include="Assets\Script\scMemo.cs" />
      <Compile Include="Assets\Script\scMemoManage.cs" />
+     <Compile Include="Assets\Script\scMouseOverEffect.cs" />
      <Compile Include="Assets\Script\scMsg.cs" />
      <Compile Include="Assets\Script\scObject.cs" />
      <Compile Include="Assets\Script\scObjectRotate.cs" />
@@ -90,25 +93,25 @@
      <Compile Include="Assets\eventexample.cs" />
      <None Include="Assets\Resources\Memo.txt" />
  <Reference Include="UnityEngine.UI">
- <HintPath>D:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
+ <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.Networking">
- <HintPath>D:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
+ <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.TestRunner">
- <HintPath>D:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/TestRunner/UnityEngine.TestRunner.dll</HintPath>
+ <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/TestRunner/UnityEngine.TestRunner.dll</HintPath>
  </Reference>
  <Reference Include="nunit.framework">
- <HintPath>D:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/TestRunner/nunit.framework.dll</HintPath>
+ <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/TestRunner/nunit.framework.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.Analytics">
- <HintPath>D:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityAnalytics/UnityEngine.Analytics.dll</HintPath>
+ <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityAnalytics/UnityEngine.Analytics.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.HoloLens">
- <HintPath>D:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityHoloLens/RuntimeEditor/UnityEngine.HoloLens.dll</HintPath>
+ <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityHoloLens/RuntimeEditor/UnityEngine.HoloLens.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.VR">
- <HintPath>D:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityVR/RuntimeEditor/UnityEngine.VR.dll</HintPath>
+ <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityVR/RuntimeEditor/UnityEngine.VR.dll</HintPath>
  </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

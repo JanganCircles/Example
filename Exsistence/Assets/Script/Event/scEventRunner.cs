@@ -23,7 +23,7 @@ public class scEventRunner : MonoBehaviour {
     public EventStasis eStasis;         //이벤트 상태
     
     public float TImer = 0;                 //타이머러너일때만 사용
-    private bool isRunning;
+    public bool isRunning;
 
     void Awake ()
     { 
@@ -62,7 +62,6 @@ public class scEventRunner : MonoBehaviour {
     {
         if (eStasis != EventStasis.TIME)
         {
-            
             return;
         }
         StartCoroutine("TimerRun");
@@ -71,14 +70,15 @@ public class scEventRunner : MonoBehaviour {
     IEnumerator TimerRun()
     {
         float MaxTIme = TImer;
-        while (MaxTIme > 0)
+
+        while (MaxTIme > 0.0f)
         {
-            Debug.Log(MaxTIme);
             MaxTIme -= Time.deltaTime;
+            Debug.Log(MaxTIme);
             yield return null;
         }
-        RunAllEvent();
 
+        RunAllEvent();
     }
     void OnTriggerEnter(Collider coll)    //충돌처리
     {
@@ -87,7 +87,7 @@ public class scEventRunner : MonoBehaviour {
         {
             return;
         }
-       if (eStasis != EventStasis.COLLISION) // 혁수 수정 : Logiccal때 Collider가 꺼져서 수정함.
+       if (eStasis != EventStasis.COLLISION)
         {
             //gameObject.GetComponent<SphereCollider>().enabled = false;
             return;
@@ -98,15 +98,16 @@ public class scEventRunner : MonoBehaviour {
         Debug.Log(scGameManager.instance.eventIndex);
         RunAllEvent();
 
-            if (MainEvent)
-            { scGameManager.instance.eventIndex++; }
+        if (MainEvent)
+        { scGameManager.instance.eventIndex++; }
             
-            Debug.Log("GameManager의 eventIndex : " + scGameManager.instance.eventIndex);
-            Debug.Log("Runner의 evtidx : " + evtidx);
+        Debug.Log("GameManager의 eventIndex : " + scGameManager.instance.eventIndex);
+        Debug.Log("Runner의 evtidx : " + evtidx);
             
     }
     public void RunAllEvent()
     {
+        Debug.Log(isRunning);
         if (isRunning) return;
         for (int i = 0; i < evts.Count; i++)
         {
