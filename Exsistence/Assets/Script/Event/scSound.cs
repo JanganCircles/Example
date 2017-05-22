@@ -15,7 +15,7 @@ public class scSound : MonoBehaviour, iEvent
     [Range(0f, 1f)]
     public float soundVolume = 1f; // 음악 불륨 
 
-    public bool loopSet; //몇 번 루프할건지(혹은 무한), 얼마나 지속되는지
+    public bool loopSet = false; //몇 번 루프할건지(혹은 무한), 얼마나 지속되는지
     public bool rangeSeting; // 이거 체크하면 게임안에서 크기 변경 가능함 
     public bool Allplay = false; // 모두 한번에 재생할것인지? 
 
@@ -34,9 +34,11 @@ public class scSound : MonoBehaviour, iEvent
         //SoundClip = gameObject.GetComponent<AudioClip>(); // 겟컴포넌트가 모든걸 가져오는건 아님 
         // 오브젝트형은 겟컴포넌트로 못함 그래서 null되었던거임 
         soundSet();
+        audioPlayer.loop = loopSet;
         for (int i = 0; i < SoundClip.Length; i++)
         {
             audioPlayer.clip = SoundClip[i];
+
         }
         
 
@@ -49,6 +51,9 @@ public class scSound : MonoBehaviour, iEvent
         //StartCoroutine(play());
     }
     // Update is called once per frame
+    /// <summary>
+    /// 
+    /// </summary>
     void Update()
     {
         if (rangeSeting == true)
@@ -56,6 +61,8 @@ public class scSound : MonoBehaviour, iEvent
             soundSet();// 계속 값 바꾸고 싶어서 update에 놓음 
         }
 
+        if (!audioPlayer.isPlaying && loopSet)
+            play();
     }
 
     public void soundSet() // 소리 들리는 범위 설정 함수 
@@ -70,6 +77,7 @@ public class scSound : MonoBehaviour, iEvent
     {
         if (Allplay)
         {
+            loopSet = true;
             Allplay = false; // false로 초기화 
             StartCoroutine(play());
         }
@@ -84,11 +92,15 @@ public class scSound : MonoBehaviour, iEvent
 
     IEnumerator play() // 한번에 배열에 있는 음악 모두 재생
     {
+        Debug.Log("isPlaying ::"+audioPlayer.isPlaying);
+
         for (int i = 0; i < SoundClip.Length; i++)
         {
             audioPlayer.PlayOneShot(SoundClip[i]);
+            
+            Debug.Log(":: NowPlaying ::" + i);
         }
-            yield return null;
+        yield return null;
 
     }
     IEnumerator play(int SoundClip_i) // 몇 번째에 있는 음악만 재생   
