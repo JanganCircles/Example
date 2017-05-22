@@ -14,7 +14,7 @@ public class scHud : MonoBehaviour {
     public scDoor door;
     public bool doorOn = true;
     //private MeshCollider doorMesh;
-    public bool doorLock = false;
+    public bool doorLock = true;
    // public scInterObject interObject;
    // public bool objectOn=true;
     // Use this for initialization
@@ -64,7 +64,7 @@ public class scHud : MonoBehaviour {
         //Debug.Log(doorLock);
     }
 
-    void OnTriggerEnter(Collider col)
+    void OnTriggerStay(Collider col)
     {
 
         if (col.gameObject.tag == "Player")
