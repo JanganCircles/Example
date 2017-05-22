@@ -14,7 +14,7 @@ public class scHud : MonoBehaviour {
     public scDoor door;
     public bool doorOn=true;
     private MeshCollider doorMesh;
-    public bool Lock = true;
+    public static bool doorLock = true;
    // public scInterObject interObject;
    // public bool objectOn=true;
     // Use this for initialization
@@ -39,7 +39,7 @@ public class scHud : MonoBehaviour {
         {
             // interactionMesh.enabled = true;
             print("e눌림");
-            if (Lock == false)
+            if (doorLock == false)
             {
                 // StartCoroutine (DoorCollider());
                 if (doorOn == true)
@@ -62,7 +62,7 @@ public class scHud : MonoBehaviour {
         /* float distance = Vector3.Distance(interactionTr.position, transform.position);
           if (distance + objside <= objside)
           */
-        Debug.Log(Lock);
+        Debug.Log(doorLock);
     }
 
     void OnTriggerEnter(Collider col)
