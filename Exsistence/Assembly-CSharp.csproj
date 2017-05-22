@@ -46,6 +46,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Script\Event\scEnding03.cs" />
      <Compile Include="Assets\Script\Event\scEventFirst.cs" />
      <Compile Include="Assets\Script\Event\scEventLight.cs" />
      <Compile Include="Assets\Script\Event\scEventMove.cs" />
@@ -93,6 +94,7 @@
      <Compile Include="Assets\Script\scSetBool.cs" />
      <Compile Include="Assets\Script\scSetting.cs" />
      <Compile Include="Assets\eventexample.cs" />
+     <None Include="Assets\Resources\Save\Save File1.txt" />
      <None Include="Assets\Resources\Memo.txt" />
  <Reference Include="UnityEngine.UI">
  <HintPath>D:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>

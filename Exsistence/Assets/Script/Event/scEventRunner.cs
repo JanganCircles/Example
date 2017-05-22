@@ -74,7 +74,6 @@ public class scEventRunner : MonoBehaviour {
         while (MaxTIme > 0.0f)
         {
             MaxTIme -= Time.deltaTime;
-            Debug.Log(MaxTIme);
             yield return null;
         }
 
@@ -107,7 +106,6 @@ public class scEventRunner : MonoBehaviour {
     }
     public void RunAllEvent()
     {
-        Debug.Log(isRunning);
         if (isRunning) return;
         for (int i = 0; i < evts.Count; i++)
         {

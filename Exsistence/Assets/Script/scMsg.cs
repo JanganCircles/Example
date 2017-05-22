@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class scMsg : MonoBehaviour {
-    private static List<GameObject> msgList = new List<GameObject>();
+    public static List<GameObject> msgList = new List<GameObject>();
     public static GameObject msgCanvas;
 	// Use this for initialization
 	void Start () {
@@ -23,7 +23,6 @@ public class scMsg : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
 	}
     public static void CreateNewMessage(string str) { 
         msgList.Add(Instantiate(msgCanvas));
@@ -32,6 +31,7 @@ public class scMsg : MonoBehaviour {
         ReMessage();
     }
     public static void DeleteMessage(int index) {
+        Debug.Log(index);
         msgList.RemoveAt(index);
         ReMessage();
     }
