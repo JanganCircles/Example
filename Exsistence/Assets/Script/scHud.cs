@@ -13,6 +13,7 @@ public class scHud : MonoBehaviour {
     private CapsuleCollider playerRd;       // collider radius 값과 거리를 같게 해줄 변수
     public scDoor door;
     public bool doorOn=true;
+    private MeshCollider doorMesh;
    // public scInterObject interObject;
    // public bool objectOn=true;
     // Use this for initialization
@@ -24,7 +25,7 @@ public class scHud : MonoBehaviour {
        
         playerRd.GetComponent<CapsuleCollider>();
         objside = playerRd.radius;
-
+        doorMesh.GetComponent<MeshCollider>();
         // hudText.GetComponent<Text>();
        // interactionMesh.enabled = true;
     }
@@ -37,7 +38,7 @@ public class scHud : MonoBehaviour {
         {
             // interactionMesh.enabled = true;
             print("e눌림");
-            
+           // StartCoroutine (DoorCollider());
             if (doorOn == true)
             {
 
@@ -79,5 +80,10 @@ public class scHud : MonoBehaviour {
         interactionMesh.enabled = false;
       
     }
-  
+   /* IEnumerator DoorCollider() {
+        doorMesh.convex = false;
+        yield return new WaitForSeconds(1);
+        doorMesh.convex = true;
+    }*/
+
 }
