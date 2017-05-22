@@ -17,6 +17,14 @@ public class scEvt12th : MonoBehaviour, iEvent
 
     public void Run()
     {
+        for (int i = msgIndex; i > msgIndex - 2; i --)
+        {
+            if (scMsg.msgList[msgIndex] != null)
+            {
+                scMsg.DeleteMessage(msgIndex);
+            }
+        }
+
         Light[0].SetActive(false);
         Light[1].SetActive(true);
     }

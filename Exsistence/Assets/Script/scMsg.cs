@@ -32,10 +32,14 @@ public class scMsg : MonoBehaviour {
     }
     public static void DeleteMessage(int index) {
         Debug.Log(index);
+
+        Destroy(msgList[index]);
         msgList.RemoveAt(index);
+        
         ReMessage();
     }
     public static void DeleteMessage(string TextValue) {
+        Destroy(msgList.Find(msgList => msgList.name.Contains("TextValue")));
         msgList.Remove(msgList.Find(msgList => msgList.name.Contains("TextValue")));
         ReMessage();
     }
