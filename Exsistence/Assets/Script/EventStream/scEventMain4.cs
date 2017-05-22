@@ -70,14 +70,14 @@ public class scEventMain4 : MonoBehaviour, iEvent
             Debug.Log("Posi.transform.position" + Posi.transform.position);
             Debug.Log("Posi.transform.rotation" + Posi.transform.rotation);
         SceneManager.LoadScene("EvtShinHyeon");
+        Player.GetComponent<scEventMain1>().enabled = false;
         //Player = gameObject.transform.Find("Player").gameObject;
         Player.transform.position = Posi.transform.position;
         Player.transform.rotation = Posi.transform.rotation;
-
-        Debug.Log("7272Player.transform.position" + Player.transform.position);
-        Debug.Log("7272Player.transform.rotation" + Player.transform.rotation);
-        Debug.Log("7272Posi.transform.position" + Posi.transform.position);
-        Debug.Log("7272Posi.transform.rotation" + Posi.transform.rotation);
+            Debug.Log("7272Player.transform.position" + Player.transform.position);
+            Debug.Log("7272Player.transform.rotation" + Player.transform.rotation);
+            Debug.Log("7272Posi.transform.position" + Posi.transform.position);
+            Debug.Log("7272Posi.transform.rotation" + Posi.transform.rotation);
 
 
 
