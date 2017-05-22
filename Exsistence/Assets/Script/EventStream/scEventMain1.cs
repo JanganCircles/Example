@@ -7,6 +7,7 @@ public class scEventMain1 : MonoBehaviour {
     public GameObject nightLight;     // 저녁 조명 
     public SpriteRenderer blackFade;
     public scSound sound1;
+    public scGameManager indx;
     Animator Ani;
     // Use this for initialization
     void Start () {
@@ -61,6 +62,7 @@ public class scEventMain1 : MonoBehaviour {
     {
         sound1.audioPlayer.Stop();
         Debug.Log("음악꺼짐");
+        indx.eventIndex++;
     }
 
 

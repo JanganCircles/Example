@@ -10,22 +10,22 @@ public class scHud : MonoBehaviour {
     //public Transform interactionTr;        // 상호작용 받는 것의 위치 값 받아오는 변수
     private Transform playerTr;             // 플레이어의 위치 값을 받아오는 변수
     public MeshRenderer interactionMesh;   // 상호작용이 되면 Meshrenderer on
-    private CapsuleCollider playerRd;       // collider radius 값과 거리를 같게 해줄 변수
+    public BoxCollider playerRd;       // collider radius 값과 거리를 같게 해줄 변수
     public scDoor door;
     public bool doorOn=true;
     private MeshCollider doorMesh;
-    public static bool doorLock = true;
+    public bool doorLock = false;
    // public scInterObject interObject;
    // public bool objectOn=true;
     // Use this for initialization
     void Start()
     {
        
-        playerTr.GetComponent<Transform>();
+        //playerTr.GetComponent<Transform>();
         interactionMesh.GetComponent<MeshRenderer>().enabled = true;
        
-        playerRd.GetComponent<CapsuleCollider>();
-        objside = playerRd.radius;
+        playerRd.GetComponent<BoxCollider>();
+       // objside = playerRd.radius;
         doorMesh.GetComponent<MeshCollider>();
         // hudText.GetComponent<Text>();
        // interactionMesh.enabled = true;
@@ -34,7 +34,7 @@ public class scHud : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
-
+        
         if (Input.GetKeyDown(KeyCode.E) && interactionMesh.enabled != false )
         {
             // interactionMesh.enabled = true;
@@ -44,7 +44,7 @@ public class scHud : MonoBehaviour {
                 // StartCoroutine (DoorCollider());
                 if (doorOn == true)
                 {
-
+                    Debug.Log("bb");
                     door.SendMessage("Open");
                 }
             }
