@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -17,11 +18,16 @@ public class scEvt12th : MonoBehaviour, iEvent
 
     public void Run()
     {
-        for (int i = msgIndex; i > msgIndex - 2; i --)
+        for (int i = msgIndex; i >= msgIndex - 1; i --)
         {
-            if (scMsg.msgList[msgIndex] != null)
+            try
             {
-                scMsg.DeleteMessage(msgIndex);
+                if (scMsg.msgList.Contains(scMsg.msgList[msgIndex]))
+                {
+                    scMsg.DeleteMessage(msgIndex);
+                }
+            }catch(Exception e)
+            {
             }
         }
 

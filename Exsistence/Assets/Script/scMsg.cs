@@ -31,8 +31,6 @@ public class scMsg : MonoBehaviour {
         ReMessage();
     }
     public static void DeleteMessage(int index) {
-        Debug.Log(index);
-
         Destroy(msgList[index]);
         msgList.RemoveAt(index);
         
