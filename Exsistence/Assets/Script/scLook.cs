@@ -9,7 +9,7 @@ public class scLook : MonoBehaviour {
     
 	// Use this for initialization
 	void Start () {
-		
+        target = GameObject.FindGameObjectWithTag("Player").transform;
 	}
 	
 	// Update is called once per frame
@@ -17,6 +17,7 @@ public class scLook : MonoBehaviour {
         targetPosition = new Vector3(target.position.x, this.transform.position.y, target.position.z);
 
         this.transform.LookAt(targetPosition);
+
 
 
     }

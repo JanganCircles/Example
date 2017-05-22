@@ -69,7 +69,7 @@ public class scHud : MonoBehaviour {
 
         if (col.gameObject.tag == "Player")
         {
-            Debug.Log("?");            
+            Debug.Log("HUD TriggerStay :: GameOpject = " + this.gameObject.name);            
             interactionMesh.enabled = true;
             //door = col.GetComponent<scDoor>();
         }
@@ -80,7 +80,7 @@ public class scHud : MonoBehaviour {
     }
     void OnTriggerExit(Collider col)
     {
-        Debug.Log("2");
+        Debug.Log("HUD TriggerExit:: GameOpject = " + this.gameObject.name);
         interactionMesh.enabled = false;
       
     }
