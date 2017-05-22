@@ -12,9 +12,9 @@ public class scHud : MonoBehaviour {
     public MeshRenderer interactionMesh;   // 상호작용이 되면 Meshrenderer on
     private CapsuleCollider playerRd;       // collider radius 값과 거리를 같게 해줄 변수
     public scDoor door;
-    public bool doorOn=true;
-    private MeshCollider doorMesh;
-    public static bool doorLock = true;
+    public bool doorOn = true;
+    //private MeshCollider doorMesh;
+    public bool doorLock = false;
    // public scInterObject interObject;
    // public bool objectOn=true;
     // Use this for initialization
@@ -23,10 +23,10 @@ public class scHud : MonoBehaviour {
        
         playerTr.GetComponent<Transform>();
         interactionMesh.GetComponent<MeshRenderer>().enabled = true;
-       
-        playerRd.GetComponent<CapsuleCollider>();
+
+        playerRd.GetComponent<CapsuleCollider>(); 
         objside = playerRd.radius;
-        doorMesh.GetComponent<MeshCollider>();
+        //doorMesh.GetComponent<MeshCollider>();
         // hudText.GetComponent<Text>();
        // interactionMesh.enabled = true;
     }
@@ -35,19 +35,18 @@ public class scHud : MonoBehaviour {
     void Update()
     {
 
-        if (Input.GetKeyDown(KeyCode.E) && interactionMesh.enabled != false )
+        if (Input.GetKeyDown(KeyCode.E) && interactionMesh.enabled != false && doorLock == false)
         {
             // interactionMesh.enabled = true;
             print("e눌림");
-            if (doorLock == false)
-            {
+            
                 // StartCoroutine (DoorCollider());
                 if (doorOn == true)
                 {
 
                     door.SendMessage("Open");
                 }
-            }
+            
             /*if(objectOn == true)
             {
                 interObject.SendMessage("Play");
@@ -62,7 +61,7 @@ public class scHud : MonoBehaviour {
         /* float distance = Vector3.Distance(interactionTr.position, transform.position);
           if (distance + objside <= objside)
           */
-        Debug.Log(doorLock);
+        //Debug.Log(doorLock);
     }
 
     void OnTriggerEnter(Collider col)

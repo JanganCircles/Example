@@ -25,8 +25,9 @@ public class scDoor : MonoBehaviour
    
     public void Open()
     {
-       
+        
         doorAni.SetBool("doorState", dOn);
+       
         dOn = !dOn;
     }
 
