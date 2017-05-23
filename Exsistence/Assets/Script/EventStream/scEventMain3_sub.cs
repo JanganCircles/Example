@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class scEventMain3_sub : MonoBehaviour, iEvent
 {
-
-    
+    public scHud opendoor;
+    public TextMesh TextMeshopen;
 
     // Use this for initialization
     void Start () {
@@ -21,9 +21,9 @@ public class scEventMain3_sub : MonoBehaviour, iEvent
     {
         if (Input.GetKeyDown(KeyCode.E) && scEventMain3.EventCount == 1 && col.gameObject.tag == "Player")
         {
-            scMsg.CreateNewMessage("문자_1수신");
-            Debug.Log("2 == EventCount : 문자수신됨 ");
-            Run();
+            //scMsg.CreateNewMessage("문자_1수신");
+            //Debug.Log("2 == EventCount : 문자수신됨 ");
+            //Run();
         }
     }
 
@@ -31,6 +31,11 @@ public class scEventMain3_sub : MonoBehaviour, iEvent
 
     public void Run()
     {
+        Debug.Log("2 == EventCount : 문자수신됨 ");
+        scMsg.CreateNewMessage("문자_1수신");
+        opendoor.doorLock = false;
+        TextMeshopen.text = "Press E";
+
 
     }
 }

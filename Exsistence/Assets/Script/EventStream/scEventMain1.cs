@@ -11,6 +11,7 @@ public class scEventMain1 : MonoBehaviour {
     public scSound sound1;
     public scSound sound2;
     public scSound sound3;
+    public scSound BGM;
     public scGameManager indx;
     Animator Ani;
     // Use this for initialization
@@ -49,6 +50,7 @@ public class scEventMain1 : MonoBehaviour {
         sound1.Run(); // 모든소리가 나옴 
         sound2.Run();
         sound3.Run();
+
     }
 
     void ChangeWindow()
@@ -69,6 +71,7 @@ public class scEventMain1 : MonoBehaviour {
         sound3.audioPlayer.Stop();
         Debug.Log("음악꺼짐");
         indx.eventIndex++;
+        BGM.Run();
     }
 
 

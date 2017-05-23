@@ -30,7 +30,7 @@ public class scEventMain4 : MonoBehaviour, iEvent
 
     IEnumerator EventStream()
     {
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(3f);
 
         Debug.Log("마네킹 킴 , 조명 킴 ");
         Mannequin.SetActive(true);
