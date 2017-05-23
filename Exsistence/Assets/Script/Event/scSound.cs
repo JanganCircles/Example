@@ -106,7 +106,7 @@ public class scSound : MonoBehaviour, iEvent
     IEnumerator play(int SoundClip_i) // 몇 번째에 있는 음악만 재생   
     {
         this.SoundClip_i = SoundClip_i;
-        audioPlayer.PlayOneShot(SoundClip[SoundClip_i]);
+        audioPlayer.Play();
         yield return null;
     }
 }

@@ -352,6 +352,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactionMesh: {fileID: 23406882216721410}
+  playerRd: {fileID: 0}
   door: {fileID: 114127464046974740}
   doorOn: 1
-  doorLock: 0
+  doorLock: 1
