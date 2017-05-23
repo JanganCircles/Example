@@ -5,8 +5,12 @@ using UnityEngine;
 public class scEventMain1 : MonoBehaviour {
     public GameObject afternoonLight; // 오후 조명 
     public GameObject nightLight;     // 저녁 조명 
+    // 초기 조명은 afternoonLight = ture , nightLight = false
+
     public SpriteRenderer blackFade;
     public scSound sound1;
+    public scSound sound2;
+    public scSound sound3;
     public scGameManager indx;
     Animator Ani;
     // Use this for initialization
@@ -30,10 +34,8 @@ public class scEventMain1 : MonoBehaviour {
 
     void TrunOffLight()
     {
-        afternoonLight.SetActive(false);
         Debug.Log("밤느낌이 나도록 조명 조정");
-        nightLight.SetActive(true);
-
+        //nightLight.SetActive(true);
     }
 
     void DoorOpen()
@@ -45,6 +47,8 @@ public class scEventMain1 : MonoBehaviour {
     {
         //Debug.Log("소리");
         sound1.Run(); // 모든소리가 나옴 
+        sound2.Run();
+        sound3.Run();
     }
 
     void ChangeWindow()
@@ -61,6 +65,8 @@ public class scEventMain1 : MonoBehaviour {
     void TrunOffSound()
     {
         sound1.audioPlayer.Stop();
+        sound2.audioPlayer.Stop();
+        sound3.audioPlayer.Stop();
         Debug.Log("음악꺼짐");
         indx.eventIndex++;
     }

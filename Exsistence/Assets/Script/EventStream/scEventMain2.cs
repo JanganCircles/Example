@@ -3,15 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class scEventMain2 : MonoBehaviour ,iEvent{
-    public scSound sound;
+    public scSound sound1;
+    public scSound sound2;
 
-	// Use this for initialization
-	void Update () {
+    // Use this for initialization
+    void Update () {
 
     }
     public void Run()
     {
-        sound.Run();
+        sound1.Run();
+        sound2.Run();
     }
     
     public void GetiEvent(object obj) { (obj as scEventRunner).SetUpEvt(this); }
