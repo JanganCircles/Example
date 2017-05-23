@@ -25,7 +25,7 @@ public class scHud : MonoBehaviour {
         interactionMesh.GetComponent<MeshRenderer>().enabled = true;
 
         playerRd.GetComponent<CapsuleCollider>(); 
-        //성우야 성우야 성우야 성우야 성우야 objside = playerRd.radius;
+        //성우야 성우야 성우야 성우야 성우야 성우야 성우야 성우야objside = playerRd.radius;
         //doorMesh.GetComponent<MeshCollider>();
         // hudText.GetComponent<Text>();
        // interactionMesh.enabled = true;
