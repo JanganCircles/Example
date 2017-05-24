@@ -8,7 +8,15 @@ public class scDoor : MonoBehaviour
         
     private Animator doorAni;
     public GameObject Door;
+
+    private AudioSource Audio;
+    public AudioClip openSound;
     
+    void Awake()
+    {
+        Audio = transform.GetComponent<AudioSource>();
+    }
+
     void Start()
     {
        
@@ -27,6 +35,13 @@ public class scDoor : MonoBehaviour
     {
         doorAni.SetBool("doorState", dOn);
         dOn = !dOn;
+    }
+
+    void OpenSound()
+    {
+        Audio.clip = openSound;
+
+        Audio.Play();
     }
 
 
