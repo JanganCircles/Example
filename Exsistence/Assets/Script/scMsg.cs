@@ -12,9 +12,11 @@ public class scMsg : MonoBehaviour {
         msgCanvas = GameObject.FindWithTag("msgCanvas");
         if (msgCanvas != null)
         {
+            CreateNewMessage("안녕...");
             Debug.Log("아아아아");
             MessageUnvis();
         }
+        scMsg.CreateNewMessage("올때 메로나");
     }
 	
 	// Update is called once per frame
