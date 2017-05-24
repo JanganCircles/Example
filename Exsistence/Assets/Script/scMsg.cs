@@ -13,20 +13,17 @@ public class scMsg : MonoBehaviour {
         if (msgCanvas != null)
         {
             Debug.Log("아아아아");
-            CreateNewMessage("안녕");
-            CreateNewMessage("지현아");
-            CreateNewMessage("지현우주");
             MessageUnvis();
         }
-        scMsg.CreateNewMessage("aaaa");
     }
 	
 	// Update is called once per frame
 	void Update () {
 	}
-    public static void CreateNewMessage(string str) { 
+    public static void CreateNewMessage(string str) {
+        print("CreateNewMessage : " + str);
         msgList.Add(Instantiate(msgCanvas));
-        msgList[msgList.Count-1].transform.GetChild(0).GetChild(0)
+        msgList[msgList.Count -1].transform.GetChild(0).GetChild(0)
             .GetComponent<Transform>().GetComponent<Text>().text = str;
         ReMessage();
     }
