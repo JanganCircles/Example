@@ -62,7 +62,7 @@ public class scSound : MonoBehaviour, iEvent
         }
 
         if (!audioPlayer.isPlaying && loopSet)
-            play();
+            co_play();
     }
 
     public void soundSet() // 소리 들리는 범위 설정 함수 
@@ -79,18 +79,18 @@ public class scSound : MonoBehaviour, iEvent
         {
             loopSet = true;
             Allplay = false; // false로 초기화 
-            StartCoroutine(play());
+            StartCoroutine(co_play());
         }
         else
         {
-            StartCoroutine(play(SoundClip_i));
+            StartCoroutine(co_play(SoundClip_i));
         }
         
     }
 
    
 
-    IEnumerator play() // 한번에 배열에 있는 음악 모두 재생
+    IEnumerator co_play() // 한번에 배열에 있는 음악 모두 재생
     {
         Debug.Log("isPlaying ::"+audioPlayer.isPlaying);
 
@@ -103,7 +103,7 @@ public class scSound : MonoBehaviour, iEvent
         yield return null;
 
     }
-    IEnumerator play(int SoundClip_i) // 몇 번째에 있는 음악만 재생   
+    IEnumerator co_play(int SoundClip_i) // 몇 번째에 있는 음악만 재생   
     {
         this.SoundClip_i = SoundClip_i;
         audioPlayer.Play();

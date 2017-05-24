@@ -7,7 +7,7 @@ public class scEventMain3_sub : MonoBehaviour, iEvent
     public scHud opendoor;
     public TextMesh TextMeshopen;
     public  MeshRenderer PressTab;
-
+    public scSound sound1;
     // Use this for initialization
     void Start () {
 		
@@ -33,6 +33,7 @@ public class scEventMain3_sub : MonoBehaviour, iEvent
     public void Run()
     {
         Debug.Log("2 == EventCount : 문자수신됨 ");
+        sound1.audioPlayer.Play(); // 문자 올떄마다 이딴식으로 코드 넣어줘야함 메시지 안에 구현해볼려고 했는데 걍 이렇게 해야할듯 ㅠㅠ
         scMsg.CreateNewMessage("6반으로 와");
         opendoor.doorLock = false;
         TextMeshopen.text = "Press E";

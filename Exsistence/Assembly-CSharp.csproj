@@ -46,7 +46,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Script\BGM.cs" />
+     <Compile Include="Assets\Script\Es_phone.cs" />
      <Compile Include="Assets\Script\Event\scEnding03.cs" />
      <Compile Include="Assets\Script\Event\scEventFirst.cs" />
      <Compile Include="Assets\Script\Event\scEventLight.cs" />
