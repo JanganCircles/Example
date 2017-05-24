@@ -11,6 +11,7 @@ public class scDoor : MonoBehaviour
 
     private AudioSource Audio;
     public AudioClip openSound;
+    public AudioClip closeSound;
     
     void Awake()
     {
@@ -34,15 +35,19 @@ public class scDoor : MonoBehaviour
     public void Open()
     {
         doorAni.SetBool("doorState", dOn);
+        if (dOn)
+            Audio.PlayOneShot(openSound);
+        else
+            Audio.PlayOneShot(closeSound);
         dOn = !dOn;
     }
 
-    void OpenSound()
+    /*void OpenSound()
     {
         Audio.clip = openSound;
 
         Audio.Play();
-    }
+    }*/
 
 
 
