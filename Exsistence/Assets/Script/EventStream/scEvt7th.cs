@@ -2,7 +2,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class scEvt7th : MonoBehaviour, iEvent {
 
@@ -21,17 +20,4 @@ public class scEvt7th : MonoBehaviour, iEvent {
         Player.transform.rotation = Posi.transform.rotation;
         */
     }
-
-
-    // Use this for initialization
-    void Start ()
-    {
-		
-	}
-	
-	// Update is called once per frame
-	void Update ()
-    {
-		
-	}
 }

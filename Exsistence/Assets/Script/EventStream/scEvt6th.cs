@@ -24,16 +24,4 @@ public class scEvt6th : MonoBehaviour, iEvent
         pigDie.SetActive(true);
         
     }
-
-    // Use this for initialization
-    void Start ()
-    {
-		
-	}
-	
-	// Update is called once per frame
-	void Update ()
-    {
-		
-	}
 }
