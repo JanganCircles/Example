@@ -23,7 +23,7 @@ public class scEvt10th : MonoBehaviour, iEvent
 
     void OnTriggerStay(Collider other)
     {
-        if(other.gameObject.name == "Player" && Input.GetKeyDown(KeyCode.E))
+        if(other.gameObject.name == "New Player" && Input.GetKeyDown(KeyCode.E))
         {
             Runner.isRunEvent();
         }

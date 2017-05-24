@@ -11,7 +11,7 @@ public class scEnding03 : MonoBehaviour
     public Transform[] transformOb;
     public AudioClip audioClip;
     public Sprite image;
-    public SpriteRenderer fadein;
+    public Image fadein;
 
     public float audioTimer;
     public float speed = 0;
@@ -29,7 +29,7 @@ public class scEnding03 : MonoBehaviour
         Audio = transform.GetComponent<AudioSource>();
         Anim = transform.GetComponent<Animator>();
         render = transform.GetComponent<SpriteRenderer>();
-        fadein = GameObject.Find("FadeIn").GetComponent<SpriteRenderer>();
+        fadein = GameObject.Find("FadeIn").GetComponent<Image>();
 
         Anim.enabled = false;
 

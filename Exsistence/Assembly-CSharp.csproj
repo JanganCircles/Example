@@ -46,7 +46,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Script\Event\scEnding01.cs" />
      <Compile Include="Assets\Script\Event\scEnding03.cs" />
      <Compile Include="Assets\Script\Event\scEventFirst.cs" />
      <Compile Include="Assets\Script\Event\scEventLight.cs" />

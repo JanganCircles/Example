@@ -26,9 +26,8 @@ public class scEvt12th : MonoBehaviour, iEvent
                 {
                     scMsg.DeleteMessage(msgIndex);
                 }
-            }catch(Exception e)
-            {
             }
+            catch (Exception e) { }
         }
 
         Light[0].SetActive(false);
