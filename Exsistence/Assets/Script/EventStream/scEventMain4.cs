@@ -8,6 +8,8 @@ public class scEventMain4 : MonoBehaviour, iEvent
     public GameObject pig;
     public GameObject lights;
     public scSound sound;
+    public GameObject BGM;
+    public GameObject BlackBorad;
 
     public GameObject Posi; // ? 
     public GameObject Player;
@@ -32,6 +34,7 @@ public class scEventMain4 : MonoBehaviour, iEvent
     {
         yield return new WaitForSeconds(3f);
 
+        BlackBorad.SetActive(true);
         Debug.Log("마네킹 킴 , 조명 킴 ");
         Mannequin.SetActive(true);
         lights.SetActive(true);
@@ -61,8 +64,10 @@ public class scEventMain4 : MonoBehaviour, iEvent
 
 
 
-
+        
         DontDestroyOnLoad(Player);
+        DontDestroyOnLoad(BGM);
+        //yield return new WaitForSeconds(1f);
         Posi.transform.position = Player.transform.position;
         Posi.transform.rotation = Player.transform.rotation;
             Debug.Log("Player.transform.position" + Player.transform.position);
@@ -74,7 +79,8 @@ public class scEventMain4 : MonoBehaviour, iEvent
         //Player = gameObject.transform.Find("Player").gameObject;
         Player.transform.position = Posi.transform.position;
         Player.transform.rotation = Posi.transform.rotation;
-            Debug.Log("7272Player.transform.position" + Player.transform.position);
+        RenderSettings.ambientSkyColor = new Color(0.1f, 0.1f, 0.1f);
+        Debug.Log("7272Player.transform.position" + Player.transform.position);
             Debug.Log("7272Player.transform.rotation" + Player.transform.rotation);
             Debug.Log("7272Posi.transform.position" + Posi.transform.position);
             Debug.Log("7272Posi.transform.rotation" + Posi.transform.rotation);

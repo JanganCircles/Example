@@ -6,7 +6,7 @@ using UnityEngine;
 public class scEventMain3 : MonoBehaviour , iEvent {
 
     public static int EventCount = 0;
-
+    scSound sound1;
     // Use this for initialization
     void Start () {
         
@@ -28,6 +28,7 @@ public class scEventMain3 : MonoBehaviour , iEvent {
             Debug.Log("Player 접촉 확인 완료   ");
             EventCount++;
             Debug.Log("EventCount : " + EventCount);
+            sound1.Run();
         }
     }
 
