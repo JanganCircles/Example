@@ -6,10 +6,10 @@ using UnityEngine.UI;
 public class scMsg : MonoBehaviour {
     public static List<GameObject> msgList = new List<GameObject>();
     public static GameObject msgCanvas;
-    public static scSound sound1;
+    public static BGM bgm;
 	// Use this for initialization
 	void Start () {
-        sound1 = GameObject.FindGameObjectWithTag("BGM").GetComponent<scSound>();
+        bgm = GameObject.FindGameObjectWithTag("BGM").GetComponent<BGM>();
         //msgList = null;
         msgCanvas = GameObject.FindWithTag("msgCanvas");
         if (msgCanvas != null)
@@ -30,7 +30,7 @@ public class scMsg : MonoBehaviour {
         msgList[msgList.Count -1].transform.GetChild(0).GetChild(0)
             .GetComponent<Transform>().GetComponent<Text>().text = str;
         ReMessage();
-        sound1.Run();
+        bgm.audioPlayer.Play();
     }
     public static void DeleteMessage(int index) {
         Destroy(msgList[index]);
