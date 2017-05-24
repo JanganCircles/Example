@@ -2,21 +2,19 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Es_phone : MonoBehaviour {
+public class BGM : MonoBehaviour {
 
     public AudioSource audioPlayer; // 음악 플레이어 
     public AudioClip[] SoundClip; // 실제 음악 파일 
                                   // Use this for initialization
-    void Start()
-    {
-        audioPlayer = gameObject.GetComponent<AudioSource>();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
+    void Start () {
+		
+	}
+	
+	// Update is called once per frame
+	void Update () {
+		
+	}
     void startPlay()
     {
         StartCoroutine(play());
