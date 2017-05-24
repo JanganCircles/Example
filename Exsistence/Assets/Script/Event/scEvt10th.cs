@@ -8,6 +8,7 @@ public class scEvt10th : MonoBehaviour, iEvent
     public GameObject light;
     public scSound sound;
 
+    public Animator Anim;
     public void GetiEvent(object obj) { (obj as scEventRunner).SetUpEvt(this); }
 
     void Start()
