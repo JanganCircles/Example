@@ -10,7 +10,7 @@ public class scHud : MonoBehaviour {
     //public Transform interactionTr;        // 상호작용 받는 것의 위치 값 받아오는 변수
     private Transform playerTr;             // 플레이어의 위치 값을 받아오는 변수
     public MeshRenderer interactionMesh;   // 상호작용이 되면 Meshrenderer on
-    public BoxCollider playerRd;       // collider radius 값과 거리를 같게 해줄 변수
+    //public BoxCollider playerRd;       // collider radius 값과 거리를 같게 해줄 변수
     public scDoor door;
     public bool doorOn = true;
     //private MeshCollider doorMesh;
@@ -22,7 +22,7 @@ public class scHud : MonoBehaviour {
     {
        
         //playerTr.GetComponent<Transform>();
-        interactionMesh.GetComponent<MeshRenderer>().enabled = true;
+        interactionMesh.GetComponent<MeshRenderer>().enabled = false;
 
         //playerRd.GetComponent<CapsuleCollider>(); 
         //성우야 성우야 성우야 성우야 성우야 성우야 성우야 성우야objside = playerRd.radius;
