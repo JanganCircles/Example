@@ -5,6 +5,7 @@ using UnityEngine;
 public class scEventMain1 : MonoBehaviour {
     public GameObject afternoonLight; // 오후 조명 
     public GameObject nightLight;     // 저녁 조명 
+    
     // 초기 조명은 afternoonLight = ture , nightLight = false
 
     public SpriteRenderer blackFade;
@@ -37,6 +38,7 @@ public class scEventMain1 : MonoBehaviour {
     {
         Debug.Log("밤느낌이 나도록 조명 조정");
         //nightLight.SetActive(true);
+        RenderSettings.ambientSkyColor = new Color(0.1f, 0.1f, 0.1f);
     }
 
     void DoorOpen()

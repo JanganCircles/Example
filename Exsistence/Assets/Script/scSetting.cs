@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class scSetting : MonoBehaviour
 {
-    static float ambientValue = 1f;
+    static float ambientValue = 0.5f;
     static float audioVolume = 1f;
 
     public void Awake()
