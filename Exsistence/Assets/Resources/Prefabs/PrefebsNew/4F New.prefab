@@ -24149,6 +24149,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1993777241868358
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4907812512668652}
+  - component: {fileID: 212177638792109854}
+  m_Layer: 0
+  m_Name: New Sprite
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1994179095408550
 GameObject:
   m_ObjectHideFlags: 0
@@ -32138,7 +32154,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1920641923814448}
-  m_LocalRotation: {x: -0.27059805, y: 0.65328145, z: 0.6532815, w: -0.27059805}
+  m_LocalRotation: {x: -0.27059808, y: 0.6532815, z: 0.65328157, w: -0.27059808}
   m_LocalPosition: {x: -16.949846, y: 1.5266088, z: -6.9069495}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -33781,7 +33797,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1479026491078712}
-  m_LocalRotation: {x: -0.27059805, y: 0.65328145, z: 0.6532815, w: -0.27059805}
+  m_LocalRotation: {x: -0.27059808, y: 0.6532815, z: 0.65328157, w: -0.27059808}
   m_LocalPosition: {x: -2.800331, y: 1.5266088, z: -6.9069495}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -36966,7 +36982,8 @@ Transform:
   m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
   m_LocalPosition: {x: -30.208069, y: -0.2258673, z: -5.5920553}
   m_LocalScale: {x: 1, y: 1.0606828, z: 0.75401396}
-  m_Children: []
+  m_Children:
+  - {fileID: 4907812512668652}
   m_Father: {fileID: 4865573914021156}
   m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -41789,6 +41806,19 @@ Transform:
   - {fileID: 4925914021131250}
   m_Father: {fileID: 4865573914021156}
   m_RootOrder: 717
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4907812512668652
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1993777241868358}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4674631666313644}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4908050055977848
 Transform:
@@ -59833,7 +59863,7 @@ MeshRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1422429562855266}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_MotionVectors: 1
@@ -68384,7 +68414,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: ea85fe539ae16c94bbc632f548a13f7a, type: 2}
+  - {fileID: 2100000, guid: dce46bd75f232b747b3315ccea3fc048, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -82528,7 +82558,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: ea85fe539ae16c94bbc632f548a13f7a, type: 2}
+  - {fileID: 2100000, guid: dce46bd75f232b747b3315ccea3fc048, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -110857,7 +110887,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactionMesh: {fileID: 23637972794475342}
-  playerRd: {fileID: 0}
   door: {fileID: 114376910101500758}
   doorOn: 1
   doorLock: 0
@@ -110897,7 +110926,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactionMesh: {fileID: 23450654127189724}
-  playerRd: {fileID: 0}
   door: {fileID: 114422001362574272}
   doorOn: 1
   doorLock: 1
@@ -110937,7 +110965,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactionMesh: {fileID: 23086307617852878}
-  playerRd: {fileID: 0}
   door: {fileID: 114412517332259518}
   doorOn: 1
   doorLock: 1
@@ -110953,7 +110980,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactionMesh: {fileID: 23450654127189724}
-  playerRd: {fileID: 0}
   door: {fileID: 114422001362574272}
   doorOn: 1
   doorLock: 0
@@ -110969,7 +110995,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactionMesh: {fileID: 23622325112995132}
-  playerRd: {fileID: 0}
   door: {fileID: 114773747914558840}
   doorOn: 1
   doorLock: 1
@@ -110997,7 +111022,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactionMesh: {fileID: 23770653032764902}
-  playerRd: {fileID: 0}
   door: {fileID: 114985460233532710}
   doorOn: 1
   doorLock: 1
@@ -111013,7 +111037,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactionMesh: {fileID: 23913311166883732}
-  playerRd: {fileID: 0}
   door: {fileID: 114670749779358224}
   doorOn: 1
   doorLock: 1
@@ -111029,6 +111052,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Door: {fileID: 1456947748215440}
+  openSound: {fileID: 8300000, guid: 09c036252a5121d4680bc7f5d456bdcd, type: 3}
+  closeSound: {fileID: 8300000, guid: 561efea492d17d243a54bc53dd52731a, type: 3}
 --- !u!114 &114195732867266332
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -111053,7 +111078,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactionMesh: {fileID: 23804437653117696}
-  playerRd: {fileID: 0}
   door: {fileID: 114640400323410228}
   doorOn: 1
   doorLock: 1
@@ -111069,7 +111093,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactionMesh: {fileID: 23408952776312626}
-  playerRd: {fileID: 0}
   door: {fileID: 114892515728605074}
   doorOn: 1
   doorLock: 1
@@ -111097,7 +111120,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactionMesh: {fileID: 23483453441140102}
-  playerRd: {fileID: 0}
   door: {fileID: 114738534950986304}
   doorOn: 1
   doorLock: 1
@@ -111113,6 +111135,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Door: {fileID: 1643010987448116}
+  openSound: {fileID: 0}
+  closeSound: {fileID: 0}
 --- !u!114 &114257314797464714
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -111173,7 +111197,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactionMesh: {fileID: 23637972794475342}
-  playerRd: {fileID: 0}
   door: {fileID: 114376910101500758}
   doorOn: 1
   doorLock: 1
@@ -111189,6 +111212,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Door: {fileID: 1812453079157814}
+  openSound: {fileID: 0}
+  closeSound: {fileID: 0}
 --- !u!114 &114303049895088070
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -111201,7 +111226,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactionMesh: {fileID: 23335974135287768}
-  playerRd: {fileID: 0}
   door: {fileID: 114572728493724926}
   doorOn: 1
   doorLock: 1
@@ -111241,7 +111265,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactionMesh: {fileID: 23804437653117696}
-  playerRd: {fileID: 0}
   door: {fileID: 114640400323410228}
   doorOn: 1
   doorLock: 0
@@ -111269,7 +111292,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactionMesh: {fileID: 23833244709163684}
-  playerRd: {fileID: 0}
   door: {fileID: 114576844320388242}
   doorOn: 1
   doorLock: 1
@@ -111285,6 +111307,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Door: {fileID: 1030146715014336}
+  openSound: {fileID: 0}
+  closeSound: {fileID: 0}
 --- !u!114 &114370641659051576
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -111309,6 +111333,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Door: {fileID: 1382526293137108}
+  openSound: {fileID: 0}
+  closeSound: {fileID: 0}
 --- !u!114 &114412517332259518
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -111321,6 +111347,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Door: {fileID: 1864648439631172}
+  openSound: {fileID: 0}
+  closeSound: {fileID: 0}
 --- !u!114 &114417079257808372
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -111333,6 +111361,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Door: {fileID: 1904832210887256}
+  openSound: {fileID: 0}
+  closeSound: {fileID: 0}
 --- !u!114 &114422001362574272
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -111345,6 +111375,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Door: {fileID: 1745642867706434}
+  openSound: {fileID: 0}
+  closeSound: {fileID: 0}
 --- !u!114 &114436305721557342
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -111357,7 +111389,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactionMesh: {fileID: 23205255772087000}
-  playerRd: {fileID: 0}
   door: {fileID: 114804386790182948}
   doorOn: 1
   doorLock: 1
@@ -111373,7 +111404,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactionMesh: {fileID: 23840479330812214}
-  playerRd: {fileID: 0}
   door: {fileID: 114194695446073992}
   doorOn: 1
   doorLock: 0
@@ -111389,7 +111419,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactionMesh: {fileID: 23702570989447636}
-  playerRd: {fileID: 0}
   door: {fileID: 114417079257808372}
   doorOn: 1
   doorLock: 1
@@ -111405,7 +111434,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactionMesh: {fileID: 23086307617852878}
-  playerRd: {fileID: 0}
   door: {fileID: 114412517332259518}
   doorOn: 1
   doorLock: 0
@@ -111433,6 +111461,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Door: {fileID: 1524413031506648}
+  openSound: {fileID: 0}
+  closeSound: {fileID: 0}
 --- !u!114 &114539293903858324
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -111445,7 +111475,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactionMesh: {fileID: 23609073125429846}
-  playerRd: {fileID: 0}
   door: {fileID: 114664203275924112}
   doorOn: 1
   doorLock: 1
@@ -111461,6 +111490,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Door: {fileID: 1090120303286874}
+  openSound: {fileID: 0}
+  closeSound: {fileID: 0}
 --- !u!114 &114568027943722420
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -111473,6 +111504,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Door: {fileID: 1667736016387880}
+  openSound: {fileID: 0}
+  closeSound: {fileID: 0}
 --- !u!114 &114572728493724926
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -111485,6 +111518,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Door: {fileID: 1772843624443884}
+  openSound: {fileID: 0}
+  closeSound: {fileID: 0}
 --- !u!114 &114576844320388242
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -111497,6 +111532,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Door: {fileID: 1369681481167352}
+  openSound: {fileID: 0}
+  closeSound: {fileID: 0}
 --- !u!114 &114581751713104824
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -111533,6 +111570,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Door: {fileID: 1713574804072190}
+  openSound: {fileID: 0}
+  closeSound: {fileID: 0}
 --- !u!114 &114664203275924112
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -111545,6 +111584,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Door: {fileID: 1233326123647334}
+  openSound: {fileID: 0}
+  closeSound: {fileID: 0}
 --- !u!114 &114670749779358224
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -111557,6 +111598,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Door: {fileID: 1389059678053582}
+  openSound: {fileID: 0}
+  closeSound: {fileID: 0}
 --- !u!114 &114673234602107518
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -111569,7 +111612,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactionMesh: {fileID: 23390508034643158}
-  playerRd: {fileID: 0}
   door: {fileID: 114820935055980202}
   doorOn: 1
   doorLock: 0
@@ -111597,7 +111639,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactionMesh: {fileID: 23730798112948920}
-  playerRd: {fileID: 0}
   door: {fileID: 114362160336993422}
   doorOn: 1
   doorLock: 1
@@ -111613,7 +111654,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactionMesh: {fileID: 23193444859047892}
-  playerRd: {fileID: 0}
   door: {fileID: 114568027943722420}
   doorOn: 1
   doorLock: 1
@@ -111629,7 +111669,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactionMesh: {fileID: 23568079308952376}
-  playerRd: {fileID: 0}
   door: {fileID: 114257235058596620}
   doorOn: 1
   doorLock: 0
@@ -111657,6 +111696,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Door: {fileID: 1719617180571368}
+  openSound: {fileID: 0}
+  closeSound: {fileID: 0}
 --- !u!114 &114723572346444540
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -111681,6 +111722,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Door: {fileID: 1490525652474364}
+  openSound: {fileID: 0}
+  closeSound: {fileID: 0}
 --- !u!114 &114745908426073820
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -111693,7 +111736,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactionMesh: {fileID: 23564206834623508}
-  playerRd: {fileID: 0}
   door: {fileID: 114301150579459330}
   doorOn: 1
   doorLock: 1
@@ -111721,6 +111763,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Door: {fileID: 1193579907904890}
+  openSound: {fileID: 0}
+  closeSound: {fileID: 0}
 --- !u!114 &114804386790182948
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -111733,6 +111777,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Door: {fileID: 1788029941224850}
+  openSound: {fileID: 0}
+  closeSound: {fileID: 0}
 --- !u!114 &114815709684998336
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -111745,7 +111791,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactionMesh: {fileID: 23568079308952376}
-  playerRd: {fileID: 0}
   door: {fileID: 114257235058596620}
   doorOn: 1
   doorLock: 1
@@ -111761,7 +111806,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactionMesh: {fileID: 23609073125429846}
-  playerRd: {fileID: 0}
   door: {fileID: 114664203275924112}
   doorOn: 1
   doorLock: 0
@@ -111777,7 +111821,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactionMesh: {fileID: 23926241483805194}
-  playerRd: {fileID: 0}
   door: {fileID: 114563162143263648}
   doorOn: 1
   doorLock: 1
@@ -111793,6 +111836,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Door: {fileID: 1711861396099076}
+  openSound: {fileID: 0}
+  closeSound: {fileID: 0}
 --- !u!114 &114821304388131104
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -111805,7 +111850,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactionMesh: {fileID: 23390508034643158}
-  playerRd: {fileID: 0}
   door: {fileID: 114820935055980202}
   doorOn: 1
   doorLock: 1
@@ -111821,7 +111865,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactionMesh: {fileID: 23891038826428886}
-  playerRd: {fileID: 0}
   door: {fileID: 114721783384461492}
   doorOn: 1
   doorLock: 1
@@ -111837,7 +111880,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactionMesh: {fileID: 23193444859047892}
-  playerRd: {fileID: 0}
   door: {fileID: 114568027943722420}
   doorOn: 1
   doorLock: 0
@@ -111853,6 +111895,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Door: {fileID: 1328907228659896}
+  openSound: {fileID: 0}
+  closeSound: {fileID: 0}
 --- !u!114 &114934411127750806
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -111877,7 +111921,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactionMesh: {fileID: 23913311166883732}
-  playerRd: {fileID: 0}
   door: {fileID: 114670749779358224}
   doorOn: 1
   doorLock: 0
@@ -111893,7 +111936,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactionMesh: {fileID: 23622325112995132}
-  playerRd: {fileID: 0}
   door: {fileID: 114773747914558840}
   doorOn: 1
   doorLock: 0
@@ -111909,7 +111951,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactionMesh: {fileID: 23451447780147846}
-  playerRd: {fileID: 0}
   door: {fileID: 114521947522963910}
   doorOn: 1
   doorLock: 1
@@ -111925,3 +111966,45 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Door: {fileID: 1582890138496870}
+  openSound: {fileID: 0}
+  closeSound: {fileID: 0}
+--- !u!212 &212177638792109854
+SpriteRenderer:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1993777241868358}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1, y: 1}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
